@@ -158,7 +158,7 @@ anychart.core.series.RenderingSettings.prototype.updatePoint;
 /**
  * Setter for the update of a point.
  * Change the point shape when the state changes.
- * @example anychart.core.series.RenderingSettings.updatePoint_ set
+ * @example anychart.core.series.RenderingSettings.updatePoint_set
  * @param {function=} opt_pointFunction Function that looks like
  * <code>function(anychart.core.series.RenderingSettings.PointContext){
  * this.anychart.core.series.RenderingSettings.PointContext
@@ -272,7 +272,7 @@ anychart.core.series.RenderingSettings.prototype.needsWidth;
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * Getter for the YScale values.
+ * Getter for YScale values.
  * @shortDescription YScale values settings.
  * @category Specific settings
  * @listing See listing
@@ -284,13 +284,28 @@ anychart.core.series.RenderingSettings.prototype.needsWidth;
 anychart.core.series.RenderingSettings.prototype.yValues;
 
 /**
- * Setter for the YScale values.
+ * Setter for YScale values.
  * @example anychart.core.series.RenderingSettings.yValues_set
- * @param {Array.<string>} opt_value Value to set.
+ * @param {Array.<string>} opt_value An array of columns names.
  * @return {anychart.core.series.RenderingSettings} Self instance for method chaining.
  * @since 7.13.0
  */
 anychart.core.series.RenderingSettings.prototype.yValues;
+
+/** @inheritDoc */
+anychart.core.series.RenderingSettings.prototype.listen;
+
+/** @inheritDoc */
+anychart.core.series.RenderingSettings.prototype.listenOnce;
+
+/** @inheritDoc */
+anychart.core.series.RenderingSettings.prototype.unlisten;
+
+/** @inheritDoc */
+anychart.core.series.RenderingSettings.prototype.unlistenByKey;
+
+/** @inheritDoc */
+anychart.core.series.RenderingSettings.prototype.removeAllListeners;
 
 
 //------------------------------------------------------------------------------
@@ -332,6 +347,7 @@ anychart.core.series.RenderingSettings.Context.prototype.getShapesGroup;
 
 /**
  * Fetch statistics value by its key or a whole object if no key provided.
+ * @category Data
  * @param {string=} opt_key Key.
  * @return {*} Value by key.
  * @since 7.13.0
@@ -364,6 +380,7 @@ anychart.core.series.RenderingSettings.PointContext;
 
 /**
  * Returns data value by name.
+ * @category Data
  * @example anychart.core.series.RenderingSettings.PointContext.getDataValue
  * @param {string} name Value name.
  * @return {*} Value by name
@@ -379,6 +396,7 @@ anychart.core.series.RenderingSettings.PointContext.prototype.getDataValue;
 
 /**
  * Returns stacked value if the series is stacked.
+ * @category Data
  * @example anychart.core.series.RenderingSettings.PointContext.getStackedValue
  * @return {*} Value.
  * @since 7.13.0
@@ -393,6 +411,7 @@ anychart.core.series.RenderingSettings.PointContext.prototype.getStackedValue;
 
 /**
  * Returns stacked zero value if the series is stacked.
+ * @category Data
  * @example anychart.core.series.RenderingSettings.PointContext.getStackedZero
  * @return {*} Value.
  * @since 7.13.0
