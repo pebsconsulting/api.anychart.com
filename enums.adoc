@@ -3690,7 +3690,6 @@ anychart.enums.PolarSeriesType.LINE = "line";
 anychart.enums.PolarSeriesType.MARKER = "marker";
 
 
-
 //----------------------------------------------------------------------------------------------------------------------
 //
 //  anychart.enums.AvailabilityPeriod
@@ -3721,12 +3720,12 @@ anychart.enums.AvailabilityPeriod.DAY = "day";
 /**
  * None.
  */
-anychart.enums.AvailabilityPeriod.NONE = "none";anychart.enums.PolarSeriesType.MARKER = "marker";
+anychart.enums.AvailabilityPeriod.NONE = "none";
 
 
 //----------------------------------------------------------------------------------------------------------------------
 //
-//  anychart.enums.PolarSeriesType
+//  anychart.enums.LocaleDateTimeFormat
 //
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -4163,3 +4162,35 @@ anychart.enums.TimeTrackingMode.ACTIVITY_PER_CHART = "activityPerChart";
  * The height depends on the maximum occupancy of the resource. The height is calculated for each row.
  */
 anychart.enums.TimeTrackingMode.ACTIVITY_PER_RESOURCE = "activityPerResource";
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.enums.ShapeType
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Shape type.
+ * @enum {string}
+ */
+anychart.enums.ShapeType;
+
+/**
+ * Path shape type.
+ */
+anychart.enums.ShapeType.PATH = "path";
+
+/**
+ * Circle shape type.
+ */
+anychart.enums.ShapeType.CIRCLE = "circle";
+
+/**
+ * Rectangle shape type.
+ */
+anychart.enums.ShapeType.RECT = "rect";
+
+/**
+ * Ellipse shape type.
+ */
+anychart.enums.ShapeType.ELLIPSE = "ellipse";
