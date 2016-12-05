@@ -117,7 +117,7 @@ anychart.core.series.RenderingSettings.prototype.finish;
 anychart.core.series.RenderingSettings.prototype.point;
 
 /**
- * Setter for the updating of point.
+ * Setter for the point.
  * @example anychart.core.series.RenderingSettings.point_set
  * @param {function=} opt_pointFunction Function that looks like
  * <code>function(anychart.core.series.RenderingSettings.PointContext){
