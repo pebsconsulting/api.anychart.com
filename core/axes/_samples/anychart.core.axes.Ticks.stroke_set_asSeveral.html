@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="x-cat-tags" content="line anyChart"/>
+    <script src="../../../anychart.min.js"></script>
+    <script x-export="chart">
+        anychart.onDocumentReady(function() {
+            chart = anychart.line();
+            chart.spline([1.1, 1.6, 1.4, 1.9]);
+
+            var currentYAxis = chart.yAxis();
+
+            var axisTicks = currentYAxis.ticks();
+
+            // Set stroke.
+            axisTicks.stroke("#F44336", 2);
+
+            chart.title("Set stroke settings via several parameter");
+            chart.container("container");
+            chart.draw();
+        });
+    </script>
+</head>
+<body>
+<div id="container" style="width: 100%; height: 100%"></div>
+</body>
+</html>

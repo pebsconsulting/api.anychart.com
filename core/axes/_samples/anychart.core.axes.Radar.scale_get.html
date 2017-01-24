@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="x-cat-tags" content="radar line anyChart"/>
+    <script src="../../../anychart.min.js"></script>
+    <script x-export="chart">
+        anychart.onDocumentReady(function() {
+            chart = anychart.radar();
+            chart.line([6, 1, 6, 1, 6, 1]);
+
+            var currentXAxis = chart.xAxis();
+
+            chart.title("Get and modify axis scale");
+            chart.container("container");
+            chart.draw();
+
+            // Get scale.
+            var scaleSettings = currentXAxis.scale();
+
+            scaleSettings.inverted(true);
+        });
+    </script>
+</head>
+<body>
+<div id="container" style="width: 100%; height: 100%"></div>
+</body>
+</html>
