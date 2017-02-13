@@ -5,12 +5,16 @@
     <script src="../../../anychart.min.js"></script>
     <script x-export="chart">
         anychart.onDocumentReady(function() {
-            chart = anychart.circularGauge([10]);
+            chart = anychart.gauges.circular([10]);
             chart.marker({radius: 95});
-            var axis = chart.axis();
-            axis.sweepAngle(180);
-            var getSweepAngle = axis.sweepAngle(); // get sweep angle
-            chart.title("Sweep angle - " + getSweepAngle);
+
+            var currentAxis = chart.axis();
+            currentAxis.sweepAngle(180);
+
+            // Get sweep angle.
+            var sweepAngleSettings = currentAxis.sweepAngle();
+
+            chart.title("Sweep angle is " + sweepAngleSettings);
             chart.container("container");
             chart.draw();
         });

@@ -5,14 +5,14 @@
     <script src="../../anychart.min.js"></script>
     <script x-export="chart">
         anychart.onDocumentReady(function() {
-            chart = anychart.circularGauge([7.5]);
+            chart = anychart.gauges.circular([7.5]);
             chart.axis();
             chart.needle();
 
-            // Get boolean flag.
-            var encloseWithStraightLine = chart.encloseWithStraightLine();
+            // Get the boolean flag.
+            var flag = chart.encloseWithStraightLine();
 
-            chart.title("Boolean flag - " + encloseWithStraightLine);
+            chart.title("The boolean flag is " + flag);
             chart.container("container");
             chart.draw();
         });

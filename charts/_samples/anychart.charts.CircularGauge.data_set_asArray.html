@@ -5,13 +5,15 @@
     <script src="../../anychart.min.js"></script>
     <script x-export="chart">
         anychart.onDocumentReady(function() {
-            chart = anychart.circularGauge();
+            chart = anychart.gauges.circular();
 
             // Set data.
             chart.data([7.5]);
 
             chart.axis();
             chart.needle();
+
+            chart.title("Set data as an array");
             chart.container("container");
             chart.draw();
         });

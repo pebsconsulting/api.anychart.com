@@ -5,9 +5,9 @@
     <script src="../../anychart.min.js"></script>
     <script x-export="chart">
         anychart.onDocumentReady(function() {
-            chart = anychart.circularGauge();
+            chart = anychart.gauges.circular();
 
-            // Sets data.
+            // Set data.
             chart.data([
                 [7.5],
                 [10]
@@ -16,6 +16,8 @@
             chart.axis();
             chart.needle();
             chart.needle(1);
+
+            chart.title("Set data as an array of arrays");
             chart.container("container");
             chart.draw();
         });

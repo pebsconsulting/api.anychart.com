@@ -3494,6 +3494,16 @@ anychart.enums.CartesianSeriesType.STEP_AREA = "stepArea";
  */
 anychart.enums.CartesianSeriesType.STEP_LINE = "stepLine";
 
+/**
+ * Stick series type.
+ */
+anychart.enums.CartesianSeriesType.STICK = "stick";
+
+/**
+ * Jump line series type.
+ */
+anychart.enums.CartesianSeriesType.JUMP_LINE = "jumpLine";
+
 //----------------------------------------------------------------------------------------------------------------------
 //
 //  anychart.enums.Cartesian3dSeriesTyp
@@ -3632,6 +3642,16 @@ anychart.enums.StockSeriesType.STEP_AREA = "stepArea";
  * Step Line series type.
  */
 anychart.enums.StockSeriesType.STEP_LINE = "stepLine";
+
+/**
+ * Jump Line series type.
+ */
+anychart.enums.StockSeriesType.JUMP_LINE = "jumpLine";
+
+/**
+ * Stick series type.
+ */
+anychart.enums.StockSeriesType.STICK = "stick";
 
 //----------------------------------------------------------------------------------------------------------------------
 //
@@ -4223,3 +4243,25 @@ anychart.enums.StepDirection.FORWARD = "forward";
  * Backward step direction.
  */
 anychart.enums.StepDirection.BACKWARD = "backward";
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.enums.MovingAverageType
+//
+//----------------------------------------------------------------------------------------------------------------------
+/**
+ * Smoothing Types Enum.
+ * @example anychart.enums.MovingAverageType
+ * @enum {string}
+ */
+anychart.enums.MovingAverageType;
+
+/**
+ * SMA smoothing type.
+ */
+anychart.enums.MovingAverageType.SMA = "sma";
+
+/**
+ * EMA smoothing type.
+ */
+anychart.enums.MovingAverageType.EMA = "ema";

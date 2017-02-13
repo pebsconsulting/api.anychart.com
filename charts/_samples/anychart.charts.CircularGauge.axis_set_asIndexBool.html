@@ -5,14 +5,16 @@
     <script src="../../anychart.min.js"></script>
     <script x-export="chart">
         anychart.onDocumentReady(function() {
-            chart = anychart.circularGauge([7.5]);
+            chart = anychart.gauges.circular([7.5]);
             chart.needle();
+
             chart.axis();
             chart.axis(1, {radius: "50%"});
 
             // Disable axis by index.
             chart.axis(1, false);
 
+            chart.title("Disable axis by index 1");
             chart.container("container");
             chart.draw();
         });

@@ -5,7 +5,7 @@
     <script src="../../anychart.min.js"></script>
     <script x-export="chart">
         anychart.onDocumentReady(function() {
-            chart = anychart.circularGauge();
+            chart = anychart.gauges.circular();
 
             // Set data.
             chart.data("1|1 2|35", {"rowsSeparator": " ", columnsSeparator: "|"});
@@ -13,6 +13,8 @@
             chart.axis();
             chart.needle();
             chart.needle(1);
+
+            chart.title("Set data as a CSV");
             chart.container("container");
             chart.draw();
         });

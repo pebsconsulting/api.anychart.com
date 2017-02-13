@@ -5,13 +5,14 @@
     <script src="../../anychart.min.js"></script>
     <script x-export="chart">
         anychart.onDocumentReady(function() {
-            chart = anychart.circularGauge([7.5]);
+            chart = anychart.gauges.circular([7.5]);
             chart.axis();
             chart.needle();
 
             // Set stroke.
             chart.stroke("#546E7A", 3, "5 2");
 
+            chart.title("Set stroke parameters");
             chart.container("container");
             chart.draw();
         });

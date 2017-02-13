@@ -9,9 +9,10 @@
             customLabel.parentBounds(110, 0, 200, 200);
 
             // Gets parent bounds.
-            var currentParentBounds = customLabel.parentBounds();
+            var parentBounds = customLabel.parentBounds();
 
-            customLabel.text("Parent bounds - " + currentParentBounds);
+            customLabel.text("Parent bounds: \n left - " + parentBounds.left + "\ntop - " + parentBounds.top +
+                    "\nwidth - " + parentBounds.width + "\nheight - " + parentBounds.height);
             customLabel.container("container");
             customLabel.draw();
         });

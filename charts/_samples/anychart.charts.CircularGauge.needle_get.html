@@ -5,7 +5,7 @@
     <script src="../../anychart.min.js"></script>
     <script x-export="chart">
         anychart.onDocumentReady(function() {
-            chart = anychart.circularGauge([20, 10]);
+            chart = anychart.gauges.circular([20, 10]);
             chart.axis();
 
             // Get needle pointer.
@@ -16,6 +16,7 @@
             var secondNeedle = chart.needle(1);
             secondNeedle.fill("#4DB6AC");
 
+            chart.title("Get and modify needle pointer");
             chart.container("container");
             chart.draw();
         });

@@ -5,15 +5,16 @@
     <script src="../../anychart.min.js"></script>
     <script x-export="chart">
         anychart.onDocumentReady(function() {
-            chart = anychart.circularGauge([20, 10]);
+            chart = anychart.gauges.circular([20, 10]);
             chart.axis();
 
             // Set bar pointer by index.
-            chart.bar(0, {fill: "#FF8A65"});
+            chart.bar(0, {fill: "#2BC0E4"});
 
             // Set bar pointer by index.
-            chart.bar(1, {fill: "#4DB6AC"});
+            chart.bar(1, {fill: "#EAECC6"});
 
+            chart.title("Set bar pointer settings as an object by indexes");
             chart.container("container");
             chart.draw();
         });

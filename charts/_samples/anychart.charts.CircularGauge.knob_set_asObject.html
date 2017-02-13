@@ -5,12 +5,13 @@
     <script src="../../anychart.min.js"></script>
     <script x-export="chart">
         anychart.onDocumentReady(function() {
-            chart = anychart.circularGauge([20]);
+            chart = anychart.gauges.circular([20]);
             chart.axis();
 
             // Set knob pointer.
             chart.knob({fill: "#90CAF9", stroke: "#1976D2"});
 
+            chart.title("Set knob pointer as an object");
             chart.container("container");
             chart.draw();
         });

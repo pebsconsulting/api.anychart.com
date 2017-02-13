@@ -1,0 +1,80 @@
+/**
+ * Namespace anychart.math.atr<br/>
+ * {docs:Stock_Charts/Technical_Indicators/Mathematical_Description}Learn more about indicator mathematics.{docs}
+ * @namespace {anychart.math.atr}
+ * @name anychart.math.atr
+ */
+anychart.math.atr;
+
+/**
+ *
+ * Type definition for the context.
+ * @typedef {Object} anychart.math.atr.Context
+ * @property {!anychart.math.CycledQueue} queue Cycled queue.
+ * @property {number} period Indicator period.
+ * @property {number} prevResult The number to calculate.
+ * @property {number} prevClose The number to calculate.
+ * @property {Function} dispose Dispose function.
+ * @since 7.13.0
+ */
+anychart.math.atr.Context;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.math.atr.initContext
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Creates a context for ATR indicator calculation.
+ * @example anychart.math.atr
+ * @param {number=} opt_period [14] Indicator period.
+ * @return {anychart.math.atr.Context} Context.
+ * @since 7.13.0
+ */
+anychart.math.atr.initContext;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.math.atr.startFunction
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Start calculation function for ATR indicator calculation.
+ * @example anychart.math.atr
+ * @param {anychart.math.atr.Context} context Context.
+ * @since 7.13.0
+ */
+anychart.math.atr.startFunction;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.math.atr.calculationFunction
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Calculates ATR.
+ * @example anychart.math.atr
+ * @param {anychart.data.TableComputer.RowProxy} row Row proxy.
+ * @param {anychart.math.atr.Context} context Context.
+ * @since 7.13.0
+ */
+anychart.math.atr.calculationFunction;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.math.atr.createComputer
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Creates an ATR computer for the given table mapping.
+ * @example anychart.math.atr
+ * @param {anychart.data.TableMapping} mapping Data mapping.
+ * @param {number=} opt_period Indicator period.
+ * @return {anychart.data.TableComputer} Table computer.
+ * @since 7.13.0
+ */
+anychart.math.atr.createComputer;

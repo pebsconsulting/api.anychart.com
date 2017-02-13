@@ -5,13 +5,14 @@
     <script src="../../anychart.min.js"></script>
     <script x-export="chart">
         anychart.onDocumentReady(function() {
-            chart = anychart.circularGauge([7.5]);
+            chart = anychart.gauges.circular([7.5]);
             chart.axis();
             chart.needle();
 
             // Set range.
             chart.range({from: 6.9, to: 7.5});
 
+            chart.title("Set range settings as an object");
             chart.container("container");
             chart.draw();
         });
