@@ -5,9 +5,22 @@
     <script src="../../../anychart.min.js"></script>
     <script x-export="chart">
         anychart.onDocumentReady(function() {
-            chart = anychart.pie([8, 3, 7, 2]);
+            chart = anychart.pie([
+                {x: "Apples", value: 99},
+                {x: "Pears", value: 72},
+                {x: "Bananas", value: 94},
+                {x: "Grapes", value: 41},
+                {x: "Oranges", value: 71},
+                {x: "Pineapple", value: 27}
+            ]);
+
             var legend = chart.legend();
-            legend.titleSeparator({fill: "#00695C .6"}); // sets separator
+            legend.title(true);
+
+            // Set title separator.
+            legend.titleSeparator({enabled: true, fill: "#00695C 0.6"});
+
+            chart.title("Set title separator");
             chart.container("container");
             chart.draw();
         });

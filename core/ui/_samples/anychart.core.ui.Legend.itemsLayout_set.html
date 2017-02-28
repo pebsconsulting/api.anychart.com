@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="x-cat-tags" content="pie legend anyChart"/>
+    <script src="../../../anychart.min.js"></script>
+    <script x-export="chart">
+        anychart.onDocumentReady(function () {
+            chart = anychart.pie([
+                {x: "Apples", value: 99},
+                {x: "Pears", value: 72},
+                {x: "Bananas", value: 94},
+                {x: "Grapes", value: 41},
+                {x: "Oranges", value: 71},
+                {x: "Pineapple", value: 27}
+            ]);
+
+            var legend = chart.legend();
+            legend.maxWidth("10%");
+
+            // Set layout.
+            legend.itemsLayout("horizontalExpandable");
+
+            chart.title("Set legend layout");
+            chart.container("container");
+            chart.draw();
+        });
+    </script>
+</head>
+<body>
+<div id="container" style="width: 100%; height: 100%"></div>
+</body>
+</html>
