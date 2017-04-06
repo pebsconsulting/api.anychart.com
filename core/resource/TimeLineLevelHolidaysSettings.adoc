@@ -137,7 +137,7 @@ anychart.core.resource.TimeLineLevelHolidaysSettings.prototype.fill;
 
 //----------------------------------------------------------------------------------------------------------------------
 //
-//  anychart.core.resource.TimeLineLevelHolidaysSettings.prototype.textFormatter
+//  anychart.core.resource.TimeLineLevelHolidaysSettings.prototype.format
 //
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -146,19 +146,19 @@ anychart.core.resource.TimeLineLevelHolidaysSettings.prototype.fill;
  * @category Specific settings
  * @shortDescription Function to format content text.
  * @listing
- * var currentFormatter = holidays.textFormatter();
- * @return {Function} Function to format title text.
+ * var formatter = holidays.format();
+ * @return {Function|string} Function to format title text.
  * @since 7.12.0
  */
-anychart.core.resource.TimeLineLevelHolidaysSettings.prototype.textFormatter;
+anychart.core.resource.TimeLineLevelHolidaysSettings.prototype.format;
 
 /**
  * Setter for function content text for holidays.
- * @param {Function=} opt_value Function or string token to format content text.
+ * @param {(Function|string)=} opt_value Function or string token to format content text.
  * @return {anychart.core.resource.TimeLineLevelHolidaysSettings} Self instance for method chaining.
  * @since 7.12.0
  */
-anychart.core.resource.TimeLineLevelHolidaysSettings.prototype.textFormatter;
+anychart.core.resource.TimeLineLevelHolidaysSettings.prototype.format;
 
 /** @inheritDoc */
 anychart.core.resource.TimeLineLevelHolidaysSettings.prototype.zIndex;
