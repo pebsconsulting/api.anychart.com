@@ -134,7 +134,7 @@ anychart.charts.Cartesian3d.prototype.zPadding;
  * @category Series
  * @example anychart.charts.Cartesian3d.bar
  * @param {!(anychart.data.View|anychart.data.Set|Array|string)} data Data for the series.
- * @param {Object.<string, (string|boolean)>=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
+ * @param {(anychart.enums.TextParsingMode|anychart.data.TextParsingSettings)=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
  *    here as a hash map.
  * @return {anychart.core.cartesian.series.Bar3d} An instance of the created series.
  * @since 7.9.0
@@ -154,7 +154,7 @@ anychart.charts.Cartesian3d.prototype.bar;
  * @category Series
  * @example anychart.charts.Cartesian3d.column
  * @param {!(anychart.data.View|anychart.data.Set|Array|string)} data Data for the series.
- * @param {Object.<string, (string|boolean)>=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
+ * @param {(anychart.enums.TextParsingMode|anychart.data.TextParsingSettings)=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
  *    here as a hash map.
  * @return {anychart.core.cartesian.series.Column3d} An instance of the created series.
  * @since 7.9.0
@@ -174,7 +174,7 @@ anychart.charts.Cartesian3d.prototype.column;
  * @category Series
  * @example anychart.charts.Cartesian3d.area
  * @param {!(anychart.data.View|anychart.data.Set|Array|string)} data Data for the series.
- * @param {Object.<string, (string|boolean)>=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
+ * @param {(anychart.enums.TextParsingMode|anychart.data.TextParsingSettings)=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
  *    here as a hash map.
  * @return {anychart.core.cartesian.series.Area3d} An instance of the created series.
  * @since 7.9.0
@@ -249,8 +249,8 @@ anychart.charts.Cartesian3d.prototype.data;
 /**
  * Setter for the data.
  * @example anychart.charts.Cartesian3d.data_set_asArray Using array
- * @example anychart.charts.Cartesian3d.data_set_asTableData Using table data
- * @param {(anychart.data.Set|Array|anychart.data.TableData)=} opt_value Value to set
+ * @example anychart.charts.Cartesian3d.data_set_asTableData Using data settings
+ * @param {(anychart.data.Set|Array|anychart.data.DataSettings)=} opt_value Value to set
  * @return {anychart.charts.Cartesian3d} Self instance for method chaining.
  * @since 7.11.1
  */
@@ -348,6 +348,64 @@ anychart.charts.Cartesian3d.prototype.selectLabels;
  * @since 7.13.1 
  */
 anychart.charts.Cartesian3d.prototype.selectLabels;
+
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.core.Cartesian3d.prototype.getXScales
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Returns chart X scales.
+ * @category Axes and Scales
+ * @return {Array} An array of all X scales (including axes, grids, and axis markers scales).
+ * @since 7.14.0 
+ */
+anychart.charts.Cartesian3d.prototype.getXScales;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.charts.Cartesian3d.prototype.getYScales
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Returns chart Y scales.
+ * @category Axes and Scales
+ * @example anychart.charts.Cartesian3d.getYScales
+ * @return {Array} An array of all Y scales (including axes, grids, and axis markers scales).
+ * @since 7.14.0 
+ */
+anychart.charts.Cartesian3d.prototype.getYScales;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.core.Cartesian3d.prototype.getXAxesCount
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Returns the number of X-axes.
+ * @category Axes and Scales
+ * @return {number} Number of X-axes.
+ * @since 7.14.0
+ */
+anychart.charts.Cartesian3d.prototype.getXAxesCount;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.core.Cartesian3d.prototype.getYAxesCount
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Returns the number of Y-axes.
+ * @category Axes and Scales
+ * @return {number} Number of Y-axes.
+ * @since 7.14.0
+ */
+anychart.charts.Cartesian3d.prototype.getYAxesCount;
 
 /** @inheritDoc */
 anychart.charts.Cartesian3d.prototype.defaultSeriesType;
@@ -530,21 +588,6 @@ anychart.charts.Cartesian3d.prototype.toSvg;
 anychart.charts.Cartesian3d.prototype.print;
 
 /** @inheritDoc */
-anychart.charts.Cartesian3d.prototype.saveAsPNG;
-
-/** @inheritDoc */
-anychart.charts.Cartesian3d.prototype.saveAsJPG;
-
-/** @inheritDoc */
-anychart.charts.Cartesian3d.prototype.saveAsPDF;
-
-/** @inheritDoc */
-anychart.charts.Cartesian3d.prototype.saveAsSVG;
-
-/** @inheritDoc */
-anychart.charts.Cartesian3d.prototype.toSVG;
-
-/** @inheritDoc */
 anychart.charts.Cartesian3d.prototype.listen;
 
 /** @inheritDoc */
@@ -592,3 +635,17 @@ anychart.charts.Cartesian3d.prototype.saveAsXlsx;
 /** @inheritDoc */
 anychart.charts.Cartesian3d.prototype.getStat;
 
+/** @inheritDoc */
+anychart.charts.Cartesian3d.prototype.startSelectMarquee;
+
+/** @inheritDoc */
+anychart.charts.Cartesian3d.prototype.selectMarqueeFill;
+
+/** @inheritDoc */
+anychart.charts.Cartesian3d.prototype.selectMarqueeStroke;
+
+/** @inheritDoc */
+anychart.charts.Cartesian3d.prototype.inMarquee;
+
+/** @inheritDoc */
+anychart.charts.Cartesian3d.prototype.cancelMarquee;

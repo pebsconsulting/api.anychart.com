@@ -1,6 +1,6 @@
 /**
  * JumpLine Series Class.<br/>
- * {docs:Stock_Charts/Series/JumpLine}Learn more about JumpLine series{docs}
+ * {docs:Stock_Charts/Series/Jump_Line}Learn more about JumpLine series{docs}
  * @param {!anychart.charts.Stock} chart Stock chart instance.
  * @param {!anychart.core.stock.Plot} plot Plot instance.
  * @constructor
@@ -165,21 +165,6 @@ anychart.core.stock.series.JumpLine.prototype.enabled;
 
 /** @inheritDoc */
 anychart.core.stock.series.JumpLine.prototype.print;
-
-/** @inheritDoc */
-anychart.core.stock.series.JumpLine.prototype.saveAsPNG;
-
-/** @inheritDoc */
-anychart.core.stock.series.JumpLine.prototype.saveAsJPG;
-
-/** @inheritDoc */
-anychart.core.stock.series.JumpLine.prototype.saveAsPDF;
-
-/** @inheritDoc */
-anychart.core.stock.series.JumpLine.prototype.saveAsSVG;
-
-/** @inheritDoc */
-anychart.core.stock.series.JumpLine.prototype.toSVG;
 
 /** @inheritDoc */
 anychart.core.stock.series.JumpLine.prototype.listen;

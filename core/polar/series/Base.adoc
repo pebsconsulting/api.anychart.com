@@ -14,7 +14,7 @@ anychart.core.polar;
  * </ul>
  * You can also obtain <i>getIterator, getResetIterator</i> iterators here
  * @param {(anychart.data.View|anychart.data.Set|Array|string)=} opt_data Data for the series.
- * @param {Object.<string, (string|boolean)>=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
+ * @param {(anychart.enums.TextParsingMode|anychart.data.TextParsingSettings)=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
  *    here as a hash map.
  * @constructor
  * @extends {anychart.core.SeriesBase}
@@ -72,8 +72,8 @@ anychart.core.polar.series.Base.prototype.meta;
  * @listing Sample for series meta data.
  * chart.line([1,2,3]).meta({
  *     'location': 'QA',
- *     'source': 'http://some-url.dmn',
- *     'imageSRC': 'http://some-url.dmn/getImage.php?bySomeParam=Value'
+ *     'source': 'https://some-url.dmn',
+ *     'imageSRC': 'https://some-url.dmn/getImage.php?bySomeParam=Value'
  * });
  * @param {*=} opt_object Object to replace metadata.
  * @return {anychart.core.polar.series.Base} Self instance for method chaining.
@@ -86,8 +86,8 @@ anychart.core.polar.series.Base.prototype.meta;
  * @listing Sample: meta data for series by key.
  * var series = chart.line([1,2,3]);
  * series.meta('location', 'QA');
- * series.meta('source', 'http://some-url.dmn');
- * series.meta('imageSRC', 'http://some-url.dmn/getImage.php?bySomeParam=Value');
+ * series.meta('source', 'https://some-url.dmn');
+ * series.meta('imageSRC', 'https://some-url.dmn/getImage.php?bySomeParam=Value');
  * @param {string=} opt_key Metadata key.
  * @param {*=} opt_value Metadata value.
  * @return {anychart.core.polar.series.Base} Self instance for method chaining.
@@ -119,7 +119,7 @@ anychart.core.polar.series.Base.prototype.data;
  * @example anychart.core.polar.series.Base.data_set_asArrayofObjects Using array of objects
  * @example anychart.core.polar.series.Base.data_set_asCSV Using CSV
  * @param {!(anychart.data.View|anychart.data.Set|Array|string)=} opt_value Value to set.
- * @param {Object.<string, (string|boolean)>=} opt_csvSettings If CSV string is passed by first param, you can pass CSV parser settings here as a hash map.
+ * @param {(anychart.enums.TextParsingMode|anychart.data.TextParsingSettings)=} opt_csvSettings If CSV string is passed by first param, you can pass CSV parser settings here as a hash map.
  * @return {anychart.core.polar.series.Base} Self instance for method chaining.
  */
 anychart.core.polar.series.Base.prototype.data;
@@ -132,16 +132,16 @@ anychart.core.polar.series.Base.prototype.data;
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * Getter for current series X scale.
+ * Getter for the series X scale.
  * @shortDescription X-scale settings.
  * @category Scales
  * @example anychart.core.polar.series.Base.xScale_get
- * @return {anychart.scales.Base} Current series X Scale.
+ * @return {anychart.scales.Base} Series X Scale.
  */
 anychart.core.polar.series.Base.prototype.xScale;
 
 /**
- * Setter for series X scale.
+ * Setter for the series X scale.
  * @example anychart.core.polar.series.Base.xScale_set
  * @param {anychart.scales.Base=} opt_value ["linear"] Value to set.
  * @return {anychart.core.polar.series.Base} Self instance for method chaining.
@@ -156,7 +156,7 @@ anychart.core.polar.series.Base.prototype.xScale;
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * Getter for current series Y scale.
+ * Getter for the series Y scale.
  * @shortDescription Y-scale settings.
  * @category Scales
  * @example anychart.core.polar.series.Base.yScale_get
@@ -165,7 +165,7 @@ anychart.core.polar.series.Base.prototype.xScale;
 anychart.core.polar.series.Base.prototype.yScale;
 
 /**
- * Setter for series Y scale.
+ * Setter for the series Y scale.
  * @example anychart.core.polar.series.Base.yScale_set
  * @param {anychart.scales.Base=} opt_value ["linear"] Value to set.
  * @return {anychart.core.polar.series.Base} Self instance for method chaining.
@@ -277,64 +277,22 @@ anychart.core.polar.series.Base.prototype.hoverLabels;
 
 /**
  * @ignoreDoc User friendly API hide
- * Getter for current series color.
+ * Getter for the series color.
  * @shortDescription Color settings.
  * @category Coloring
  * @example anychart.core.polar.series.Base.color_get
- * @return {!anychart.graphics.vector.Fill} Current color.
+ * @return {string} Series color.
  */
 anychart.core.polar.series.Base.prototype.color;
 
 /**
  * @ignoreDoc User friendly API hide
- * Sets color settings using an object or a string.
+ * Setter for the series color.
  * {docs:Graphics/Fill_Settings}Learn more about coloring.{docs}
  * @detailed <b>Note:</b> <u>color</u> methods sets <b>fill</b> and <b>stroke</b> settings, which means it is not wise to pass
  * image fill here - stroke doesn't accept image fill.
- * @example anychart.core.polar.series.Base.color_set_asString Using string
- * @example anychart.core.polar.series.Base.color_set_asArray Using array
- * @param {anychart.graphics.vector.Fill} value ["#64b5f6"] Color as an object or a string.
- * @return {anychart.core.polar.series.Base} Self instance for method chaining.
- */
-anychart.core.polar.series.Base.prototype.color;
-
-/**
- * @ignoreDoc User friendly API hide
- * Color with opacity.<br/>
- * <b>Note:</b> If color is set as a string (e.g. 'red .5') it has a priority over opt_opacity, which
- * means: <b>color</b> set like this <b>rect.fill('red 0.3', 0.7)</b> will have 0.3 opacity.
- * @example anychart.core.polar.series.Base.color_set_asOpacity
- * @param {string} color Color as a string.
- * @param {number=} opt_opacity Color opacity.
- * @return {anychart.core.polar.series.Base} Self instance for method chaining.
- */
-anychart.core.polar.series.Base.prototype.color;
-
-/**
- * @ignoreDoc User friendly API hide
- * Linear gradient.
- * {docs:Graphics/Fill_Settings}Learn more about coloring.{docs}
- * @example anychart.core.polar.series.Base.color_set_asLinear
- * @param {!Array.<(anychart.graphics.vector.GradientKey|string)>} keys Gradient keys.
- * @param {number=} opt_angle Gradient angle.
- * @param {(boolean|!anychart.graphics.vector.Rect|!{left:number,top:number,width:number,height:number})=} opt_mode Gradient mode.
- * @param {number=} opt_opacity Gradient opacity.
- * @return {anychart.core.polar.series.Base} Self instance for method chaining.
- */
-anychart.core.polar.series.Base.prototype.color;
-
-/**
- * @ignoreDoc User friendly API hide
- * Radial gradient.
- * {docs:Graphics/Fill_Settings}Learn more about coloring.{docs}
- * @example anychart.core.polar.series.Base.color_set_asRadial
- * @param {!Array.<(anychart.graphics.vector.GradientKey|string)>} keys Color-stop gradient keys.
- * @param {number} cx X ratio of center radial gradient.
- * @param {number} cy Y ratio of center radial gradient.
- * @param {anychart.graphics.math.Rect=} opt_mode If defined then userSpaceOnUse mode, else objectBoundingBox.
- * @param {number=} opt_opacity Opacity of the gradient.
- * @param {number=} opt_fx X ratio of focal point.
- * @param {number=} opt_fy Y ratio of focal point.
+ * @example anychart.core.polar.series.Base.color_set
+ * @param {string} value Color as a string.
  * @return {anychart.core.polar.series.Base} Self instance for method chaining.
  */
 anychart.core.polar.series.Base.prototype.color;
@@ -448,21 +406,6 @@ anychart.core.polar.series.Base.prototype.enabled;
 anychart.core.polar.series.Base.prototype.print;
 
 /** @inheritDoc */
-anychart.core.polar.series.Base.prototype.saveAsPNG;
-
-/** @inheritDoc */
-anychart.core.polar.series.Base.prototype.saveAsJPG;
-
-/** @inheritDoc */
-anychart.core.polar.series.Base.prototype.saveAsPDF;
-
-/** @inheritDoc */
-anychart.core.polar.series.Base.prototype.saveAsSVG;
-
-/** @inheritDoc */
-anychart.core.polar.series.Base.prototype.toSVG;
-
-/** @inheritDoc */
 anychart.core.polar.series.Base.prototype.listen;
 
 /** @inheritDoc */
@@ -499,10 +442,76 @@ anychart.core.polar.series.Base.prototype.id;
  */
 anychart.core.polar.series.Base.prototype.transformXY;
 
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//   anychart.core.polar.series.Base.prototype.excludePoint
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Excludes points at the specified index.
+ * @category Data
+ * @param {number|Array.<number>} indexes Points indexes.
+ * @return {boolean} Returns 'true' if the points were excluded.
+ */
+anychart.core.polar.series.Base.prototype.excludePoint;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//   anychart.core.polar.series.Base.prototype.includePoint
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Includes excluded points with the specified indexes.
+ * @category Data
+ * @param {number|Array.<number>} indexes Points indexes.
+ * @return {boolean} Returns true if the points were included.
+ */
+anychart.core.polar.series.Base.prototype.includePoint;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//   anychart.core.polar.series.Base.prototype.keepOnlyPoints
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Keep only the specified points.
+ * @category Data
+ * @param {number|Array.<number>} indexes Point index or indexes.
+ */
+anychart.core.polar.series.Base.prototype.keepOnlyPoints;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//   anychart.core.polar.series.Base.prototype.includeAllPoints
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Includes all excluded points.
+ * @category Data
+ * @return {boolean} Returns 'true' if all points were included.
+ */
+anychart.core.polar.series.Base.prototype.includeAllPoints;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//   anychart.core.polar.series.Base.prototype.getExcludedPoints
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Returns an array of excluded points.
+ * @category Data
+ * @return {Array.<anychart.core.Point>} Array of the points.
+ */
+anychart.core.polar.series.Base.prototype.getExcludedPoints;
+
 /** @inheritDoc */
 anychart.core.polar.series.Base.prototype.getPoint;
-
-
 
 /** @inheritDoc */
 anychart.core.polar.series.Base.prototype.getStat;

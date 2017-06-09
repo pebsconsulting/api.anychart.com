@@ -1,9 +1,9 @@
 /**
  * Area Series Class.<br/>
  * <b>Note:</b> Use {@link anychart.charts.Cartesian#area} method to get this series.<br/>
- * {docs:Basic_Charts_Types/Area_Chart}Learn more about Area series{docs}
+ * {docs:Basic_Charts/Area_Chart}Learn more about Area series{docs}
  * @param {(anychart.data.View|anychart.data.Set|Array|string)=} opt_data Data for the series.
- * @param {Object.<string, (string|boolean)>=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
+ * @param {(anychart.enums.TextParsingMode|anychart.data.TextParsingSettings)=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
  *    here as a hash map.
  * @constructor
  * @extends {anychart.core.cartesian.series.ContinuousBase}
@@ -627,21 +627,6 @@ anychart.core.cartesian.series.Area.prototype.enabled;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.Area.prototype.print;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Area.prototype.saveAsPNG;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Area.prototype.saveAsJPG;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Area.prototype.saveAsPDF;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Area.prototype.saveAsSVG;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Area.prototype.toSVG;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.Area.prototype.listen;

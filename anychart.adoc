@@ -46,7 +46,7 @@ anychart.fromJson;
 anychart.fromXml;
 
 /**
- * Add callback for the document load event.<br/>
+ * Adds callback for the document load event.<br/>
  * It is fired when the entire page loads, including its content (images, css, scripts, etc.).
  * @param {Function} func Function which will be called on document load event.
  * @param {*=} opt_scope Function call context.
@@ -54,17 +54,17 @@ anychart.fromXml;
 anychart.onDocumentLoad;
 
 /**
- * Add callback for document ready event.<br/>
- * It is called when the DOM is ready, this can happen prior to images and other external content is loaded.
+ * Adds callback for the document ready event.<br/>
+ * It is called when the DOM is ready, this can happen prior to loading images and other external content.
  * @example anychart.onDocumentReady
- * @param {Function} func Function which will called on document load event.
+ * @param {Function} func Function which is called on the document load event.
  * @param {*=} opt_scope Function call context.
  */
 anychart.onDocumentReady;
 
 /**
  * Setter for AnyChart license key.<br/>
- * To purchase a license proceed to <a href="http://www.anychart.com/buy/">Buy AnyChart</a> page.
+ * To purchase a license proceed to <a href="https://www.anychart.com/buy/">Buy AnyChart</a> page.
  * @example anychart.licenseKey
  * @param {string=} opt_value Your licence key.
  * @return {?string} Current licence key.
@@ -129,7 +129,7 @@ anychart.DEFAULT_THEME;
  * @detailed <b>Note</b>: If it doesn't set the theme, you will get the current theme.<br/>
  * <br/>
  * For example, to use theme name "pastel" you have to connect special theme file with the name pastel.js.<br/>
- * This file, as well as other files, can be found at {@link http://cdn.anychart.com/#themes}.<br/>
+ * This file, as well as other files, can be found at {@link https://cdn.anychart.com/#themes}.<br/>
  * After referencing the file you can use theme() method with "pastel" parameter to apply pastel theme: anychart.theme("pastel");<br/>
  * <br/>
  * To disable installed themes - pass <b>null</b>.<br/>

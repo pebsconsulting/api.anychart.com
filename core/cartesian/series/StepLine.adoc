@@ -1,9 +1,9 @@
 /**
  * StepLine Series Class.<br/>
  * <b>Note:</b> Use {@link anychart.charts.Cartesian#stepLine} method to get this series.<br/>
- * {docs:Basic_Charts_Types/Line-Spline-StepLine_Charts}Learn more about StepLine series{docs}
+ * {docs:Basic_Charts/Step_Line_Chart}Learn more about StepLine series{docs}
  * @param {(anychart.data.View|anychart.data.Set|Array|string)=} opt_data Data for the series.
- * @param {Object.<string, (string|boolean)>=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
+ * @param {(anychart.enums.TextParsingMode|anychart.data.TextParsingSettings)=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
  *    here as a hash map.
  * @constructor
  * @extends {anychart.core.cartesian.series.ContinuousBase}
@@ -290,21 +290,6 @@ anychart.core.cartesian.series.StepLine.prototype.enabled;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.StepLine.prototype.print;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.StepLine.prototype.saveAsPNG;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.StepLine.prototype.saveAsJPG;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.StepLine.prototype.saveAsPDF;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.StepLine.prototype.saveAsSVG;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.StepLine.prototype.toSVG;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.StepLine.prototype.listen;

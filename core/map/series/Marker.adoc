@@ -1,7 +1,7 @@
 /**
  * Marker series.
  * @param {(anychart.data.View|anychart.data.Set|Array|string)=} opt_data Data to set.
- * @param {Object.<string, (string|boolean)>=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
+ * @param {(anychart.enums.TextParsingMode|anychart.data.TextParsingSettings)=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
  * here as a hash map.
  * @constructor
  * @extends {anychart.core.map.series.Base}
@@ -304,21 +304,6 @@ anychart.core.map.series.Marker.prototype.enabled;
 anychart.core.map.series.Marker.prototype.print;
 
 /** @inheritDoc */
-anychart.core.map.series.Marker.prototype.saveAsPNG;
-
-/** @inheritDoc */
-anychart.core.map.series.Marker.prototype.saveAsJPG;
-
-/** @inheritDoc */
-anychart.core.map.series.Marker.prototype.saveAsPDF;
-
-/** @inheritDoc */
-anychart.core.map.series.Marker.prototype.saveAsSVG;
-
-/** @inheritDoc */
-anychart.core.map.series.Marker.prototype.toSVG;
-
-/** @inheritDoc */
 anychart.core.map.series.Marker.prototype.listen;
 
 /** @inheritDoc */
@@ -339,3 +324,17 @@ anychart.core.map.series.Marker.prototype.getStat;
 /** @inheritDoc */
 anychart.core.map.series.Marker.prototype.overlapMode;
 
+/** @inheritDoc */
+anychart.core.map.series.Marker.prototype.excludePoint;
+
+/** @inheritDoc */
+anychart.core.map.series.Marker.prototype.includePoint;
+
+/** @inheritDoc */
+anychart.core.map.series.Marker.prototype.keepOnlyPoints;
+
+/** @inheritDoc */
+anychart.core.map.series.Marker.prototype.includeAllPoints;
+
+/** @inheritDoc */
+anychart.core.map.series.Marker.prototype.getExcludedPoints;

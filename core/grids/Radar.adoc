@@ -24,7 +24,7 @@ anychart.core.grids.Radar.prototype.layout;
 /**
  * Setter for the grid layout.
  * @example anychart.core.grids.Radar.layout_set
- * @param {(anychart.enums.RadialGridLayout|string)=} opt_value ["circuit"] Grid layout.
+ * @param {(anychart.enums.RadialGridLayout|string)=} opt_value ["radial"] Grid layout.
  * @return {anychart.core.grids.Radar} Self instance for method chaining.
  */
 anychart.core.grids.Radar.prototype.layout;
@@ -351,21 +351,6 @@ anychart.core.grids.Radar.prototype.enabled;
 
 /** @inheritDoc */
 anychart.core.grids.Radar.prototype.print;
-
-/** @inheritDoc */
-anychart.core.grids.Radar.prototype.saveAsPNG;
-
-/** @inheritDoc */
-anychart.core.grids.Radar.prototype.saveAsJPG;
-
-/** @inheritDoc */
-anychart.core.grids.Radar.prototype.saveAsPDF;
-
-/** @inheritDoc */
-anychart.core.grids.Radar.prototype.saveAsSVG;
-
-/** @inheritDoc */
-anychart.core.grids.Radar.prototype.toSVG;
 
 /** @inheritDoc */
 anychart.core.grids.Radar.prototype.listen;

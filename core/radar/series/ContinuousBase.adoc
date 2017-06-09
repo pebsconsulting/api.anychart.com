@@ -1,7 +1,7 @@
 /**
  * A base for all continuous series, like lines, splines, areas, etc.
  * @param {(anychart.data.View|anychart.data.Set|Array|string)=} opt_data Data for the series.
- * @param {Object.<string, (string|boolean)>=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
+ * @param {(anychart.enums.TextParsingMode|anychart.data.TextParsingSettings)=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
  *    here as a hash map.
  * @constructor
  * @extends {anychart.core.radar.series.Base}
@@ -80,16 +80,16 @@ anychart.core.radar.series.ContinuousBase.prototype.hoverMarkers;
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * Getter for connect missing points setting.
+ * Getter for connectMissingPoints mode.
  * @shortDescription Connect missing points setting.
  * @category Specific settings
  * @example anychart.core.radar.series.ContinuousBase.connectMissingPoints_get
- * @return {boolean} Current setting.
+ * @return {boolean} ConnectMissingPoints mode.
  */
 anychart.core.radar.series.ContinuousBase.prototype.connectMissingPoints;
 
 /**
- * Setter for connect missing points setting.
+ * Setter for connectMissingPoints mode.
  * @example anychart.core.radar.series.ContinuousBase.connectMissingPoints_set
  * @param {boolean=} opt_value [false] If set to <b>true</b>, the series will not be interrupted on missing points.<br/>
  * Markers will not be drawn for missing points in both cases.
@@ -240,21 +240,6 @@ anychart.core.radar.series.ContinuousBase.prototype.enabled;
 
 /** @inheritDoc */
 anychart.core.radar.series.ContinuousBase.prototype.print;
-
-/** @inheritDoc */
-anychart.core.radar.series.ContinuousBase.prototype.saveAsPNG;
-
-/** @inheritDoc */
-anychart.core.radar.series.ContinuousBase.prototype.saveAsJPG;
-
-/** @inheritDoc */
-anychart.core.radar.series.ContinuousBase.prototype.saveAsPDF;
-
-/** @inheritDoc */
-anychart.core.radar.series.ContinuousBase.prototype.saveAsSVG;
-
-/** @inheritDoc */
-anychart.core.radar.series.ContinuousBase.prototype.toSVG;
 
 /** @inheritDoc */
 anychart.core.radar.series.ContinuousBase.prototype.listen;

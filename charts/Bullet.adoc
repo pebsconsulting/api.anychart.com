@@ -29,7 +29,7 @@ anychart.charts.Bullet.prototype.data;
  * @example anychart.charts.Bullet.data_set_asArrayofObject Using object with added markers
  * @example anychart.charts.Bullet.data_set_asCSV Using CSV
  * @param {(anychart.data.View|anychart.data.Set|Array|string)=} opt_value Value to set.
- * @param {Object.<string, (string|boolean)>=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings here as a hash map.
+ * @param {(anychart.enums.TextParsingMode|anychart.data.TextParsingSettings)=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings here as a hash map.
  * @return {anychart.charts.Bullet} Self instance for method chaining.
  */
 anychart.charts.Bullet.prototype.data;
@@ -241,6 +241,7 @@ anychart.charts.Bullet.prototype.markerPalette;
  * Starts the rendering of the chart into the container.
  * @shortDescription Drawing of bullet chart.
  * @example anychart.charts.Bullet.draw
+ * @param {boolean=} opt_async Whether do draw asynchronously. If set to <b>true</b>, the chart will be drawn asynchronously.
  * @return {anychart.charts.Bullet} Self instance for method chaining.
  */
 anychart.charts.Bullet.prototype.draw;
@@ -355,21 +356,6 @@ anychart.charts.Bullet.prototype.toSvg;
 anychart.charts.Bullet.prototype.print;
 
 /** @inheritDoc */
-anychart.charts.Bullet.prototype.saveAsPNG;
-
-/** @inheritDoc */
-anychart.charts.Bullet.prototype.saveAsJPG;
-
-/** @inheritDoc */
-anychart.charts.Bullet.prototype.saveAsPDF;
-
-/** @inheritDoc */
-anychart.charts.Bullet.prototype.saveAsSVG;
-
-/** @inheritDoc */
-anychart.charts.Bullet.prototype.toSVG;
-
-/** @inheritDoc */
 anychart.charts.Bullet.prototype.listen;
 
 /** @inheritDoc */
@@ -413,4 +399,19 @@ anychart.charts.Bullet.prototype.saveAsXlsx;
 
 /** @inheritDoc */
 anychart.charts.Bullet.prototype.getStat;
+
+/** @inheritDoc */
+anychart.charts.Bullet.prototype.startSelectMarquee;
+
+/** @inheritDoc */
+anychart.charts.Bullet.prototype.selectMarqueeFill;
+
+/** @inheritDoc */
+anychart.charts.Bullet.prototype.selectMarqueeStroke;
+
+/** @inheritDoc */
+anychart.charts.Bullet.prototype.inMarquee;
+
+/** @inheritDoc */
+anychart.charts.Bullet.prototype.cancelMarquee;
 

@@ -73,7 +73,7 @@ anychart.core.axes.Polar.prototype.minorLabels;
  * @shortDescription Labels settings.
  * @category Specific settings
  * @example anychart.core.axes.Polar.labels_get
- * @return {anychart.core.ui.LabelsFactory} Axis labels instance.
+ * @return {anychart.core.ui.CircularLabelsFactory} Axis labels instance.
  */
 anychart.core.axes.Polar.prototype.labels;
 
@@ -229,21 +229,6 @@ anychart.core.axes.Polar.prototype.enabled;
 
 /** @inheritDoc */
 anychart.core.axes.Polar.prototype.print;
-
-/** @inheritDoc */
-anychart.core.axes.Polar.prototype.saveAsPNG;
-
-/** @inheritDoc */
-anychart.core.axes.Polar.prototype.saveAsJPG;
-
-/** @inheritDoc */
-anychart.core.axes.Polar.prototype.saveAsPDF;
-
-/** @inheritDoc */
-anychart.core.axes.Polar.prototype.saveAsSVG;
-
-/** @inheritDoc */
-anychart.core.axes.Polar.prototype.toSVG;
 
 /** @inheritDoc */
 anychart.core.axes.Polar.prototype.listen;

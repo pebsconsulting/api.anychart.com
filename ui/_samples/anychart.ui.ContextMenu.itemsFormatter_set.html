@@ -3,41 +3,46 @@
     <meta charset="UTF-8"/>
     <meta name="x-cat-tags" content="line contextMenu anyChart"/>
     <script src="../../anychart.min.js"></script>
-    <link rel="stylesheet" href="http://cdn.anychart.com/css/latest/anychart-ui.css">
+    <link rel="stylesheet" href="https://cdn.anychart.com/css/latest/anychart-ui.css">
     <script x-export="chart">
         anychart.onDocumentReady(function() {
             // To change the way how context menu looks you need to change CSS.
-            // By default CSS from AnyChart CDN is used: http://cdn.anychart.com/css/latest/anychart-ui.css
+            // By default CSS from AnyChart CDN is used: https://cdn.anychart.com/css/latest/anychart-ui.css
             // Download it, alter, upload to your server and link from your pages to change the look.
 
-            chart = anychart.line([1, 2, 1.3, 2.9]);
-            chart.contextMenu(false);
+            chart = anychart.line([
+                {x: "January", value: 1},
+                {x: "February", value: 2},
+                {x: "March", value: 1.3},
+                {x: "April", value: 2.9}
+            ]);
 
-            var customContextMenu = anychart.ui.contextMenu();
-            customContextMenu.attach(chart);
-            customContextMenu.itemsProvider(function() {
-                return [
-                    {
-                        text: "Open AnyChart API",
-                        href: "http://api.anychart.com"
-                    }
-                ];
-            });
+            chart.contextMenu().itemsFormatter(function(){
 
-            // Set items formatter.
-            customContextMenu.itemsFormatter(function(){
-                this.push({
-                    text: "New item",
+                // Adding custom item to the top of context menu.
+                this.unshift({
+                    text: "My custom item 1",
                     subMenu: [{
-                        text: "subItem",
-                        href: "http://anychart.com"
+                        text: "My custom sub-item 1",
+                        href: "https://anychart.com"
                     }]
                 });
 
+                // Adding separator after custom item 1.
+                this.splice(1, 0, undefined);
+
+                // Adding custom item to the bottom of context menu.
+                this.push({
+                    text: "My custom item 2",
+                    subMenu: [{
+                        text: "My custom sub-item 2",
+                        href: "https://anychart.com"
+                    }]
+                });
                 return this;
             });
 
-            chart.title("Use items formatter to add submenu.");
+            chart.title("Use items formatter to add submenu");
             chart.container("container");
             chart.draw();
         });

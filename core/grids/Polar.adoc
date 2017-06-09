@@ -25,7 +25,7 @@ anychart.core.grids.Polar.prototype.layout;
 /**
  * Setter for the grid layout.
  * @example anychart.core.grids.Polar.layout_set
- * @param {(anychart.enums.RadialGridLayout|string)=} opt_value ["circuit"] Grid layout.
+ * @param {(anychart.enums.RadialGridLayout|string)=} opt_value ["radial"] Grid layout.
  * @return {anychart.core.grids.Polar} Self instance for method chaining.
  */
 anychart.core.grids.Polar.prototype.layout;
@@ -349,21 +349,6 @@ anychart.core.grids.Polar.prototype.enabled;
 
 /** @inheritDoc */
 anychart.core.grids.Polar.prototype.print;
-
-/** @inheritDoc */
-anychart.core.grids.Polar.prototype.saveAsPNG;
-
-/** @inheritDoc */
-anychart.core.grids.Polar.prototype.saveAsJPG;
-
-/** @inheritDoc */
-anychart.core.grids.Polar.prototype.saveAsPDF;
-
-/** @inheritDoc */
-anychart.core.grids.Polar.prototype.saveAsSVG;
-
-/** @inheritDoc */
-anychart.core.grids.Polar.prototype.toSVG;
 
 /** @inheritDoc */
 anychart.core.grids.Polar.prototype.listen;

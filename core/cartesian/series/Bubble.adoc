@@ -1,9 +1,9 @@
 /**
  * Bubble Series Class.<br/>
  * <b>Note:</b> Use {@link anychart.charts.Cartesian#bubble} method to get this series.<br/>
- * {docs:Basic_Charts_Types/Bubble_Chart}Learn more about Bubble series{docs}
+ * {docs:Basic_Charts/Bubble_Chart}Learn more about Bubble series{docs}
  * @param {(anychart.data.View|anychart.data.Set|Array|string)=} opt_data Data for the series.
- * @param {Object.<string, (string|boolean)>=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
+ * @param {(anychart.enums.TextParsingMode|anychart.data.TextParsingSettings)=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
  *    here as a hash map.
  * @constructor
  * @extends {anychart.core.cartesian.series.BaseWithMarkers}
@@ -1188,21 +1188,6 @@ anychart.core.cartesian.series.Bubble.prototype.enabled;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.Bubble.prototype.print;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Bubble.prototype.saveAsPNG;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Bubble.prototype.saveAsJPG;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Bubble.prototype.saveAsPDF;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Bubble.prototype.saveAsSVG;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Bubble.prototype.toSVG;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.Bubble.prototype.listen;

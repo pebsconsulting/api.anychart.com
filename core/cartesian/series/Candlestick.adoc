@@ -1,9 +1,9 @@
 /**
  * Candlestick Series Class.<br/>
  * <b>Note:</b> Use {@link anychart.charts.Cartesian#candlestick} method to get this series.<br/>
- * {docs:Basic_Charts_Types/Japanese_Candlestick_Chart}Learn more about Candlestick series{docs}
+ * {docs:Basic_Charts/Japanese_Candlestick_Chart}Learn more about Candlestick series{docs}
  * @param {(anychart.data.View|anychart.data.Set|Array|string)=} opt_data Data for the series.
- * @param {Object.<string, (string|boolean)>=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
+ * @param {(anychart.enums.TextParsingMode|anychart.data.TextParsingSettings)=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
  *    here as a hash map.
  * @constructor
  * @extends {anychart.core.cartesian.series.OHLC}
@@ -861,21 +861,6 @@ anychart.core.cartesian.series.Candlestick.prototype.enabled;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.Candlestick.prototype.print;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Candlestick.prototype.saveAsPNG;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Candlestick.prototype.saveAsJPG;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Candlestick.prototype.saveAsPDF;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Candlestick.prototype.saveAsSVG;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Candlestick.prototype.toSVG;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.Candlestick.prototype.listen;

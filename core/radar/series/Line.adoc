@@ -2,7 +2,7 @@
  * Define Line series type.<br/>
  * <b>Note:</b> Better for use {@link anychart.charts.Radar#line} method.
  * @param {(anychart.data.View|anychart.data.Set|Array|string)=} opt_data Data for the series.
- * @param {Object.<string, (string|boolean)>=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
+ * @param {(anychart.enums.TextParsingMode|anychart.data.TextParsingSettings)=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings
  *    here as a hash map.
  * @constructor
  * @extends {anychart.core.radar.series.ContinuousBase}
@@ -37,10 +37,10 @@ anychart.core.radar.series.Line.prototype.startDrawing;
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * Getter for current stroke settings.
+ * Getter for stroke settings.
  * @shortDescription Stroke settings.
  * @category Coloring
- * @return {!anychart.graphics.vector.Stroke} Current stroke settings.
+ * @return {!anychart.graphics.vector.Stroke} Stroke settings.
  */
 anychart.core.radar.series.Line.prototype.stroke;
 
@@ -63,7 +63,7 @@ anychart.core.radar.series.Line.prototype.stroke;
  * Setter for stroke settings.
  * {docs:Graphics/Stroke_Settings}Learn more about stroke settings.{docs}
  * @example anychart.core.radar.series.Line.stroke_set
- * @param {(anychart.graphics.vector.Stroke|anychart.graphics.vector.ColoredFill|string|Function|null)=} opt_color Stroke settings.
+ * @param {(anychart.graphics.vector.Stroke|anychart.graphics.vector.ColoredFill|string|null)=} opt_color Stroke settings.
  * @param {number=} opt_thickness Line thickness.
  * @param {string=} opt_dashpattern Controls the pattern of dashes and gaps used to stroke paths.
  * @param {anychart.graphics.vector.StrokeLineJoin=} opt_lineJoin Line join style.
@@ -80,10 +80,10 @@ anychart.core.radar.series.Line.prototype.stroke;
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * Getter for current stroke settings.
+ * Getter for hover stroke settings.
  * @shortDescription Stroke settings in hover mode.
  * @category Coloring
- * @return {!anychart.graphics.vector.Stroke} Current stroke settings.
+ * @return {!anychart.graphics.vector.Stroke} Hover stroke settings.
  */
 anychart.core.radar.series.Line.prototype.hoverStroke;
 
@@ -123,10 +123,10 @@ anychart.core.radar.series.Line.prototype.hoverStroke;
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * Getter for current stroke settings in selected mode.
+ * Getter for stroke settings in selected mode.
  * @shortDescription Stroke settings in selected mode.
  * @category Coloring
- * @return {!anychart.graphics.vector.Stroke} Current stroke settings.
+ * @return {!anychart.graphics.vector.Stroke} Select stroke settings.
  * @since 7.7.0
  */
 anychart.core.radar.series.Line.prototype.selectStroke;
@@ -270,21 +270,6 @@ anychart.core.radar.series.Line.prototype.enabled;
 anychart.core.radar.series.Line.prototype.print;
 
 /** @inheritDoc */
-anychart.core.radar.series.Line.prototype.saveAsPNG;
-
-/** @inheritDoc */
-anychart.core.radar.series.Line.prototype.saveAsJPG;
-
-/** @inheritDoc */
-anychart.core.radar.series.Line.prototype.saveAsPDF;
-
-/** @inheritDoc */
-anychart.core.radar.series.Line.prototype.saveAsSVG;
-
-/** @inheritDoc */
-anychart.core.radar.series.Line.prototype.toSVG;
-
-/** @inheritDoc */
 anychart.core.radar.series.Line.prototype.listen;
 
 /** @inheritDoc */
@@ -308,7 +293,20 @@ anychart.core.radar.series.Line.prototype.transformXY;
 /** @inheritDoc */
 anychart.core.radar.series.Line.prototype.getPoint;
 
-
 /** @inheritDoc */
 anychart.core.radar.series.Line.prototype.getStat;
 
+/** @inheritDoc */
+anychart.core.radar.series.Line.prototype.excludePoint;
+
+/** @inheritDoc */
+anychart.core.radar.series.Line.prototype.includePoint;
+
+/** @inheritDoc */
+anychart.core.radar.series.Line.prototype.keepOnlyPoints;
+
+/** @inheritDoc */
+anychart.core.radar.series.Line.prototype.includeAllPoints;
+
+/** @inheritDoc */
+anychart.core.radar.series.Line.prototype.getExcludedPoints;

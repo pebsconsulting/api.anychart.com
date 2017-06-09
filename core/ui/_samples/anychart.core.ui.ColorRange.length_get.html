@@ -3,7 +3,7 @@
     <meta charset="UTF-8"/>
     <meta name="x-cat-tags" content="anyMap"/>
     <script src="../../../anychart.min.js"></script>
-    <script src="http://cdn.anychart.com/geodata/1.2.0/countries/australia/australia.js" data-export="true"></script>
+    <script src="https://cdn.anychart.com/geodata/1.2.0/countries/australia/australia.js" data-export="true"></script>
     <script x-export="australiaMap">
         anychart.onDocumentReady(function() {
             var dataSet = anychart.data.set([
@@ -29,13 +29,13 @@
 
             series.colorScale(linearColorScale);
 
-            var myColorRange = australiaMap.colorRange();
-            myColorRange.enabled(true);
+            var colorRange = australiaMap.colorRange();
+            colorRange.enabled(true);
 
-            // Gets color range length.
-            var length = myColorRange.length();
+            // Get color range length.
+            var length = colorRange.length();
 
-            australiaMap.title("The current length is " + length);
+            australiaMap.title("Length is " + length);
             australiaMap.container("container");
             australiaMap.draw();
         });

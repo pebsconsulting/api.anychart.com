@@ -1,6 +1,6 @@
 /**
  * Box Series Class.<br/>
- * {docs:Basic_Charts_Types/Box_Chart}Learn more about Box series{docs}
+ * {docs:Basic_Charts/Box_Chart}Learn more about Box series{docs}
  * @constructor
  * @extends {anychart.core.cartesian.series.WidthBased}
  */
@@ -1218,21 +1218,6 @@ anychart.core.cartesian.series.Box.prototype.enabled;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.Box.prototype.print;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Box.prototype.saveAsPNG;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Box.prototype.saveAsJPG;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Box.prototype.saveAsPDF;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Box.prototype.saveAsSVG;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Box.prototype.toSVG;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.Box.prototype.listen;
