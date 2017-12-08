@@ -39,13 +39,13 @@ anychart.core.ui.StageCredits.prototype.text;
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * Getter for credits url.
- * @shortDescription Url for credits.
+ * Getter for credits url address.
+ * @shortDescription Url address for credits.
  * @category Specific settings
  * @listing See listing
- * var currentCredits = stage.credits();
- * var creditsUrl = currentCredits.url();
- * @return {string} Credits url.
+ * var credits = stage.credits();
+ * var creditsUrl = credits.url();
+ * @return {string} Credits url address.
  */
 anychart.core.ui.StageCredits.prototype.url;
 
@@ -70,8 +70,8 @@ anychart.core.ui.StageCredits.prototype.url;
  * @shortDescription Alternative text for credits.
  * @category Specific settings
  * @listing See listing
- * var currentCredits = stage.credits();
- * var creditsAlt = currentCredits.alt();
+ * var credits = stage.credits();
+ * var creditsAlt = credits.alt();
  * @return {string} Credits alternative text.
  */
 anychart.core.ui.StageCredits.prototype.alt;
@@ -97,8 +97,8 @@ anychart.core.ui.StageCredits.prototype.alt;
  * @shortDescription Logo source for credits.
  * @category Specific settings
  * @listing See listing
- * var currentCredits = stage.credits();
- * var creditsLogoSrc = currentCredits.logoSrc();
+ * var credits = stage.credits();
+ * var creditsLogoSrc = credits.logoSrc();
  * @return {string} Credits logo source.
  */
 anychart.core.ui.StageCredits.prototype.logoSrc;
@@ -138,11 +138,35 @@ anychart.core.ui.StageCredits.prototype.imgAlt;
  */
 anychart.core.ui.StageCredits.prototype.imgAlt;
 
-/** @inheritDoc */
-anychart.core.ui.StageCredits.prototype.zIndex;
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.core.ui.StageCredits.prototype.enabled
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Getter for the sateg credits state.
+ * @shortDescription Credits state (enabled or disabled).
+ * @category Interactivity
+ * @listing See listing
+ * var credits = stage.credits();
+ * var state = credits.enabled();
+ * @return {boolean|null} Credits state.
+ * @since 7.13.0
+ */
+anychart.core.ui.StageCredits.prototype.enabled;
+
+/**
+ * Setter for the stage credits state.
+ * @example anychart.core.ui.StageCredits.enabled
+ * @param {?boolean=} opt_value Value to set.
+ * @return {anychart.core.ui.StageCredits} Self instance for method chaining.
+ * @since 7.13.0
+ */
+anychart.core.ui.StageCredits.prototype.enabled;
 
 /** @inheritDoc */
-anychart.core.ui.StageCredits.prototype.enabled;
+anychart.core.ui.StageCredits.prototype.zIndex;
 
 /** @inheritDoc */
 anychart.core.ui.StageCredits.prototype.print;

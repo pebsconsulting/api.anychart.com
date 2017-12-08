@@ -12,6 +12,15 @@
 anychart.core.cartesian.series.Bar3d;
 
 /** @inheritDoc */
+anychart.core.cartesian.series.Bar3d.prototype.normal;
+
+/** @inheritDoc */
+anychart.core.cartesian.series.Bar3d.prototype.hovered;
+
+/** @inheritDoc */
+anychart.core.cartesian.series.Bar3d.prototype.selected;
+
+/** @inheritDoc */
 anychart.core.cartesian.series.Bar3d.prototype.pointWidth;
 
 /** @inheritDoc */
@@ -208,3 +217,9 @@ anychart.core.cartesian.series.Bar3d.prototype.isVertical;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.Bar3d.prototype.rendering;
+
+/** @inheritDoc */
+anychart.core.cartesian.series.Bar3d.prototype.minPointLength;
+
+/** @inheritDoc */
+anychart.core.cartesian.series.Bar3d.prototype.maxPointWidth;

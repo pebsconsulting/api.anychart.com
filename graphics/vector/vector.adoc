@@ -22,22 +22,22 @@ anychart.graphics.vector.Anchor;
 /**
  * The left-top anchor of the element.
  */
-anychart.graphics.vector.Anchor.LEFT_TOP = 'leftTop';
+anychart.graphics.vector.Anchor.LEFT_TOP = 'left-top';
 
 /**
  *  The left-center anchor of the element.
  */
-anychart.graphics.vector.Anchor.LEFT_CENTER = 'leftCenter';
+anychart.graphics.vector.Anchor.LEFT_CENTER = 'left-center';
 
 /**
  *  The left-bottom anchor of the element.
  */
-anychart.graphics.vector.Anchor.LEFT_BOTTOM = 'leftBottom';
+anychart.graphics.vector.Anchor.LEFT_BOTTOM = 'left-bottom';
 
 /**
  * The center-top anchor of the element.
  */
-anychart.graphics.vector.Anchor.CENTER_TOP = 'centerTop';
+anychart.graphics.vector.Anchor.CENTER_TOP = 'center-top';
 
 /**
  *  The center anchor of the element.
@@ -47,22 +47,22 @@ anychart.graphics.vector.Anchor.CENTER = 'center';
 /**
  *  The center-bottom anchor of the element.
  */
-anychart.graphics.vector.Anchor.CENTER_BOTTOM = 'centerBottom';
+anychart.graphics.vector.Anchor.CENTER_BOTTOM = 'center-bottom';
 
 /**
  *  The right-top anchor of the element.
  */
-anychart.graphics.vector.Anchor.RIGHT_TOP = 'rightTop';
+anychart.graphics.vector.Anchor.RIGHT_TOP = 'right-top';
 
 /**
  * The right-center anchor of the element.
  */
-anychart.graphics.vector.Anchor.RIGHT_CENTER = 'rightCenter';
+anychart.graphics.vector.Anchor.RIGHT_CENTER = 'right-center';
 
 /**
  * The right-bottom anchor of the element.
  */
-anychart.graphics.vector.Anchor.RIGHT_BOTTOM = 'rightBottom';
+anychart.graphics.vector.Anchor.RIGHT_BOTTOM = 'right-bottom';
 
 /**
  * Automatic mode for anchor of the element.
@@ -427,7 +427,8 @@ anychart.graphics.vector.AnyColor;
  * @property {(anychart.graphics.vector.Text.HAlign|string|undefined)} hAlign hAling. More at {@link anychart.graphics.vector.Text.HAlign}.
  * @property {(number|string|undefined)} width Text width.
  * @property {(number|string|undefined)} height Text height.
- * @property {(anychart.graphics.vector.Text.TextWrap|undefined)} textWrap Text wrap. More at {@link anychart.graphics.vector.Text.TextWrap}.
+ * @property {(string|undefined)} wordWrap Word wrap mode. More at {@link anychart.graphics.vector.Text.WordWrap}.
+ * @property {(string|undefined)} wordBreak Word break mode. More at {@link anychart.graphics.vector.Text.WordBreak}.
  * @property {(anychart.graphics.vector.Text.TextOverflow|undefined)} textOverflow Text overflow. More at
  * {@link anychart.graphics.vector.Text.TextOverflow}.
  * @property {(boolean|undefined)} selectable Whether text can be selected.
@@ -543,7 +544,7 @@ anychart.graphics.vector.ImageFillMode.STRETCH = "stretch";
 /**
  * Fit by greater side.
  */
-anychart.graphics.vector.ImageFillMode.FIT_MAX = "fitMax";
+anychart.graphics.vector.ImageFillMode.FIT_MAX = "fit-max";
 
 /**
  * Fit by lesser side.
@@ -633,7 +634,7 @@ anychart.graphics.vector.PaperSize;
  * It measures 8.5 by 11 inches (215.9 mm x 279.4 mm). US Letter size is a recognized standard adopted by the American
  * National Standards Institute (ANSI) whereas the A4 is the International Standard (ISO) used in most countries.
  */
-anychart.graphics.vector.PaperSize.US_LETTER = 'usletter';
+anychart.graphics.vector.PaperSize.US_LETTER = 'us-letter';
 
 /**
  * The base A0 size of paper is defined as having an area of 1 m2. Rounded to the nearest millimetre,

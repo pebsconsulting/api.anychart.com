@@ -87,7 +87,6 @@ anychart.ui.ContextMenu.prototype.itemsFormatter;
 
 /**
  * Setter for the items formatter.<br/>
- * {docs:Common_Settings/Text_Formatters}Learn more about using itemsFormat() method.{docs}
  * @example anychart.ui.ContextMenu.itemsFormatter_set
  * @param {function=} opt_value Formatter function.
  * @return {anychart.ui.ContextMenu} Self instance for method chaining.
@@ -307,6 +306,7 @@ anychart.ui.ContextMenu.prototype.unlisten;
  * Type definition for the context menu item.
  * @typedef {Object} anychart.ui.ContextMenu.Item
  * @property {string} text Text for the item.
+ * @property {number} index Item index.
  * @property {string} href Link to a webpage.
  * @property {string} target Target for context menu.
  * @property {string} eventType Event type.
@@ -314,6 +314,7 @@ anychart.ui.ContextMenu.prototype.unlisten;
  * @property {string} iconClass Name for icon class.
  * @property {Array.<anychart.ui.ContextMenu.Item>} subMenu Name for submenu.
  * @property {boolean} enabled State of the context menu.
+ * @property {boolean} scrollable State of the scrollable.
  * @property {string|Array.<string>} classNames Name for CSS class.
  * @property {*} meta Meta.
  */

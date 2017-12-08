@@ -13,7 +13,6 @@
  * Each series is interactive, you can customize click and hover behavior and other parameters.
  * @extends {anychart.core.SeparateChart}
  * @constructor
- * @param {boolean=} opt_isVertical If true, sets the layout to VERTICAL, swapping default chart elements behaviour.
  */
 anychart.charts.Cartesian;
 
@@ -29,7 +28,7 @@ anychart.charts.Cartesian;
  * @shortDescription X-scale settings.
  * @category Axes and Scales
  * @example anychart.charts.Cartesian.xScale_get
- * @return {!anychart.scales.Base} Default chart scale value.
+ * @return {anychart.scales.Ordinal} Default chart scale value.
  */
 anychart.charts.Cartesian.prototype.xScale;
 
@@ -37,7 +36,7 @@ anychart.charts.Cartesian.prototype.xScale;
  * Setter for the chart X-scale.
  * @detailed <b>Note:</b> This scale will be passed to all scale dependent chart elements if they don't have their own scales.
  * @example anychart.charts.Cartesian.xScale_set
- * @param {(anychart.enums.ScaleTypes|anychart.scales.Base)=} opt_value X-scale to set.
+ * @param {(Object|string|anychart.enums.ScaleTypes|anychart.scales.Base)=} opt_value X-scale to set.
  * @return {anychart.charts.Cartesian} Self instance for method chaining.
  */
 anychart.charts.Cartesian.prototype.xScale;
@@ -54,7 +53,7 @@ anychart.charts.Cartesian.prototype.xScale;
  * @shortDescription Y-scale settings.
  * @category Axes and Scales
  * @example anychart.charts.Cartesian.yScale_get
- * @return {!anychart.scales.Base} Default chart scale value.
+ * @return {anychart.scales.Linear} Default chart scale value.
  */
 anychart.charts.Cartesian.prototype.yScale;
 
@@ -62,7 +61,7 @@ anychart.charts.Cartesian.prototype.yScale;
  * Setter for the chart Y-scale.
  * @detailed <b>Note:</b> This scale will be passed to all scale dependent chart elements if they don't have their own scales.
  * @example anychart.charts.Cartesian.yScale_set
- * @param {(anychart.enums.ScaleTypes|anychart.scales.Base)=} opt_value Y-scale to set.
+ * @param {(Object|string|anychart.enums.ScaleTypes|anychart.scales.Base)=} opt_value Y-scale to set.
  * @return {anychart.charts.Cartesian} Self instance for method chaining.
  */
 anychart.charts.Cartesian.prototype.yScale;
@@ -70,79 +69,133 @@ anychart.charts.Cartesian.prototype.yScale;
 
 //----------------------------------------------------------------------------------------------------------------------
 //
-//  anychart.charts.Cartesian.prototype.grid
+//  anychart.charts.Cartesian.prototype.xGrid
 //
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * Getter for the current chart grid.
+ * Getter for the chart grid by X-scale.
  * @shortDescription Grid settings.
  * @category Axes and Scales
- * @example anychart.charts.Cartesian.grid_get
- * @param {number=} opt_index [0] Chart grid index. If don't set - creates a new instance and adds it to the end of array.
+ * @example anychart.charts.Cartesian.xGrid_get
+ * @param {number=} opt_index [0] Chart grid index. If not set - creates a new instance and adds it to the end of the array.
  * @return {!anychart.core.grids.Linear} Grid instance by index.
+ * @since 8.0.0
  */
-anychart.charts.Cartesian.prototype.grid;
+anychart.charts.Cartesian.prototype.xGrid;
 
 /**
- * Setter for the chart grid.
- * @detailed Sets chart grid settings depending on parameter type:
+ * Setter for the chart grid by X-scale.
+ * @detailed Sets chart xGrid settings depending on parameter type:
  * <ul>
- *   <li><b>null/boolean</b> - disable or enable chart grid.</li>
- *   <li><b>object</b> - sets chart grid settings.</li>
+ *   <li><b>null/boolean</b> - disable or enable chart xGrid.</li>
+ *   <li><b>object</b> - sets chart xGrid settings.</li>
  * </ul>
- * @example anychart.charts.Cartesian.grid_set_asBool Disable/Enable grid
- * @example anychart.charts.Cartesian.grid_set_asObject Using object
+ * @example anychart.charts.Cartesian.xGrid_set_asBool Disable/Enable grid
+ * @example anychart.charts.Cartesian.xGrid_set_asObject Using object
  * @param {(Object|boolean|null)=} opt_value [false] Chart grid settings to set.
  * @return {anychart.charts.Cartesian} Self instance for method chaining.
+ * @since 8.0.0
  */
-anychart.charts.Cartesian.prototype.grid;
+anychart.charts.Cartesian.prototype.xGrid;
 
 /**
  * Setter for chart grid by index.
- * @detailed Sets chart grid settings by index depending on parameter type:
+ * @detailed Sets chart xGrid settings by index depending on parameter type:
  * <ul>
- *   <li><b>null/boolean</b> - disable or enable chart grid by index.</li>
- *   <li><b>object</b> - sets chart grid settings by index.</li>
+ *   <li><b>null/boolean</b> - disable or enable chart xGrid by index.</li>
+ *   <li><b>object</b> - sets chart xGrid settings by index.</li>
  * </ul>
- * @example anychart.charts.Cartesian.grid_set_asIndexBool Disable/Enable grid by index
- * @example anychart.charts.Cartesian.grid_set_asIndexObject Using object
+ * @example anychart.charts.Cartesian.xGrid_set_asIndexBool Disable/Enable grid by index
+ * @example anychart.charts.Cartesian.xGrid_set_asIndexObject Using object
  * @param {number=} opt_index [0] Chart grid index.
  * @param {(Object|boolean|null)=} opt_value [false] Chart grid settings to set.
  * @return {anychart.charts.Cartesian} Self instance for method chaining.
+ * @since 8.0.0
  */
-anychart.charts.Cartesian.prototype.grid;
-
+anychart.charts.Cartesian.prototype.xGrid;
 
 //----------------------------------------------------------------------------------------------------------------------
 //
-//  anychart.charts.Cartesian.prototype.minorGrid
+//  anychart.charts.Cartesian.prototype.yGrid
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.charts.Cartesian.prototype.yGrid
 //
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * Getter for the current chart minor grid.
+ * Getter for the chart grid by Y-scale.
+ * @shortDescription Grid settings.
+ * @category Axes and Scales
+ * @example anychart.charts.Cartesian.yGrid_get
+ * @param {number=} opt_index [0] Chart grid index. If not set - creates a new instance and adds it to the end of the array.
+ * @return {!anychart.core.grids.Linear} Grid instance by index.
+ * @since 8.0.0
+ */
+anychart.charts.Cartesian.prototype.yGrid;
+
+/**
+ * Setter for the chart grid by Y-scale.
+ * @detailed Sets chart yGrid settings depending on parameter type:
+ * <ul>
+ *   <li><b>null/boolean</b> - disable or enable chart yGrid.</li>
+ *   <li><b>object</b> - sets chart yGrid settings.</li>
+ * </ul>
+ * @example anychart.charts.Cartesian.yGrid_set_asBool Disable/Enable grid
+ * @example anychart.charts.Cartesian.yGrid_set_asObject Using object
+ * @param {(Object|boolean|null)=} opt_value [false] Chart grid settings to set.
+ * @return {anychart.charts.Cartesian} Self instance for method chaining.
+ * @since 8.0.0
+ */
+anychart.charts.Cartesian.prototype.yGrid;
+
+/**
+ * Setter for chart grid by index.
+ * @detailed Sets chart yGrid settings by index depending on parameter type:
+ * <ul>
+ *   <li><b>null/boolean</b> - disable or enable chart yGrid by index.</li>
+ *   <li><b>object</b> - sets chart yGrid settings by index.</li>
+ * </ul>
+ * @example anychart.charts.Cartesian.yGrid_set_asIndexBool Disable/Enable grid by index
+ * @example anychart.charts.Cartesian.yGrid_set_asIndexObject Using object
+ * @param {number=} opt_index [0] Chart grid index.
+ * @param {(Object|boolean|null)=} opt_value [false] Chart grid settings to set.
+ * @return {anychart.charts.Cartesian} Self instance for method chaining.
+ * @since 8.0.0
+ */
+anychart.charts.Cartesian.prototype.yGrid;
+
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.charts.Cartesian.prototype.xMinorGrid
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Getter for the chart minor grid by X-scale.
  * @shortDescription Minor grid settings.
  * @category Axes and Scales
- * @example anychart.charts.Cartesian.minorGrid_get
- * @param {number=} opt_index [0] Chart minor grid index. If don't set - creates a new instance and adds it to the end of array.
+ * @param {number=} opt_index [0] Chart minor grid index. If not set - creates a new instance and adds it to the end of the array.
  * @return {!anychart.core.grids.Linear} Minor grid instance by index.
  */
-anychart.charts.Cartesian.prototype.minorGrid;
+anychart.charts.Cartesian.prototype.xMinorGrid;
 
 /**
- * Setter for the chart minor grid.
+ * Setter for the chart minor grid by X-scale.
  * @detailed Sets chart minor grid settings depending on parameter type:
  * <ul>
  *   <li><b>null/boolean</b> - disable or enable chart minor grid.</li>
  *   <li><b>object</b> - sets chart minor grid settings.</li>
  * </ul>
- * @example anychart.charts.Cartesian.minorGrid_set_asBool Disable/Enable minor grid
- * @example anychart.charts.Cartesian.minorGrid_set_asObject Using object
  * @param {(Object|boolean|null)=} opt_value [false] Chart minor grid settings to set.
  * @return {anychart.charts.Cartesian} Self instance for method chaining.
  */
-anychart.charts.Cartesian.prototype.minorGrid;
+anychart.charts.Cartesian.prototype.xMinorGrid;
 
 /**
  * Setter for the chart minor grid by index.
@@ -151,13 +204,56 @@ anychart.charts.Cartesian.prototype.minorGrid;
  *   <li><b>null/boolean</b> - disable or enable chart minor grid by index.</li>
  *   <li><b>object</b> - sets chart minor grid settings by index.</li>
  * </ul>
- * @example anychart.charts.Cartesian.minorGrid_set_asIndexBool Disable/Enable minor grid by index
- * @example anychart.charts.Cartesian.minorGrid_set_asIndexObject Using object
  * @param {number=} opt_index [0] Chart minor grid index.
  * @param {(Object|boolean|null)=} opt_value [false] Chart minor grid settings to set.
  * @return {anychart.charts.Cartesian} Self instance for method chaining.
  */
-anychart.charts.Cartesian.prototype.minorGrid;
+anychart.charts.Cartesian.prototype.xMinorGrid;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.charts.Cartesian.prototype.yMinorGrid
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Getter for the chart minor grid by Y-scale.
+ * @shortDescription Minor grid settings.
+ * @category Axes and Scales
+ * @example anychart.charts.Cartesian.yMinorGrid_get
+ * @param {number=} opt_index [0] Chart minor grid index. If not set - creates a new instance and adds it to the end of the array.
+ * @return {!anychart.core.grids.Linear} Minor grid instance by index.
+ */
+anychart.charts.Cartesian.prototype.yMinorGrid;
+
+/**
+ * Setter for the chart minor grid by Y-scale.
+ * @detailed Sets chart minor grid settings depending on parameter type:
+ * <ul>
+ *   <li><b>null/boolean</b> - disable or enable chart minor grid.</li>
+ *   <li><b>object</b> - sets chart minor grid settings.</li>
+ * </ul>
+ * @example anychart.charts.Cartesian.yMinorGrid_set_asBool Disable/Enable minor grid
+ * @example anychart.charts.Cartesian.yMinorGrid_set_asObject Using object
+ * @param {(Object|boolean|null)=} opt_value [false] Chart minor grid settings to set.
+ * @return {anychart.charts.Cartesian} Self instance for method chaining.
+ */
+anychart.charts.Cartesian.prototype.yMinorGrid;
+
+/**
+ * Setter for the chart minor grid by index.
+ * @detailed Sets chart minor grid settings by index depending on parameter type:
+ * <ul>
+ *   <li><b>null/boolean</b> - disable or enable chart minor grid by index.</li>
+ *   <li><b>object</b> - sets chart minor grid settings by index.</li>
+ * </ul>
+ * @example anychart.charts.Cartesian.yMinorGrid_set_asIndexBool Disable/Enable minor grid by index
+ * @example anychart.charts.Cartesian.yMinorGrid_set_asIndexObject Using object
+ * @param {number=} opt_index [0] Chart minor grid index.
+ * @param {(Object|boolean|null)=} opt_value [false] Chart minor grid settings to set.
+ * @return {anychart.charts.Cartesian} Self instance for method chaining.
+ */
+anychart.charts.Cartesian.prototype.yMinorGrid;
 
 
 //----------------------------------------------------------------------------------------------------------------------
@@ -171,7 +267,7 @@ anychart.charts.Cartesian.prototype.minorGrid;
  * @shortDescription X-axis settings.
  * @category Axes and Scales
  * @example anychart.charts.Cartesian.xAxis_get
- * @param {number=} opt_index [0] Chart axis index. If don't set - creates a new instance and adds it to the end of array.
+ * @param {number=} opt_index [0] Chart axis index. If not set - creates a new instance and adds it to the end of the array.
  * @return {!anychart.core.axes.Linear} Axis instance by index.
  */
 anychart.charts.Cartesian.prototype.xAxis;
@@ -218,7 +314,7 @@ anychart.charts.Cartesian.prototype.xAxis;
  * @shortDescription Y-axis settings.
  * @category Axes and Scales
  * @example anychart.charts.Cartesian.yAxis_get
- * @param {number=} opt_index [0] Chart axis index. If don't set - creates a new instance and adds it to the end of array.
+ * @param {number=} opt_index [0] Chart axis index. If not set - creates a new instance and adds it to the end of the array.
  * @return {!anychart.core.axes.Linear} Axis instance by index.
  */
 anychart.charts.Cartesian.prototype.yAxis;
@@ -265,7 +361,7 @@ anychart.charts.Cartesian.prototype.yAxis;
  * @shortDescription Line marker settings.
  * @category Axes and Scales
  * @example anychart.charts.Cartesian.lineMarker_get
- * @param {number=} opt_index [0] Chart line marker index. If don't set - creates a new instance and adds it to the end of array.
+ * @param {number=} opt_index [0] Chart line marker index. If not set - creates a new instance and adds it to the end of the array.
  * @return {!anychart.core.axisMarkers.Line} Line marker instance by index.
  */
 anychart.charts.Cartesian.prototype.lineMarker;
@@ -311,7 +407,7 @@ anychart.charts.Cartesian.prototype.lineMarker;
  * @shortDescription Range marker settings.
  * @category Axes and Scales
  * @example anychart.charts.Cartesian.rangeMarker_get
- * @param {number=} opt_index [0] Chart range marker index. If don't set - creates a new instance and adds it to the end of array.
+ * @param {number=} opt_index [0] Chart range marker index. If not set - creates a new instance and adds it to the end of the array.
  * @return {!anychart.core.axisMarkers.Range} Range marker instance by index.
  */
 anychart.charts.Cartesian.prototype.rangeMarker;
@@ -357,7 +453,7 @@ anychart.charts.Cartesian.prototype.rangeMarker;
  * @shortDescription Text marker settings.
  * @category Axes and Scales
  * @example anychart.charts.Cartesian.textMarker_get
- * @param {number=} opt_index [0] Chart text marker index. If don't set - creates a new instance and adds it to the end of array.
+ * @param {number=} opt_index [0] Chart text marker index. If not set - creates a new instance and adds it to the end of the array.
  * @return {!anychart.core.axisMarkers.Text} Text marker instance by index.
  */
 anychart.charts.Cartesian.prototype.textMarker;
@@ -914,7 +1010,6 @@ anychart.charts.Cartesian.prototype.hatchFillPalette;
  *      <li>{@link anychart#line}</li>
  *      <li>{@link anychart#box}</li>
  *  </ul> <br/>
- * If you need the Bar Chart mode you have to swap axes using {@link anychart.core.axes.Linear#orientation} method.
  * @example anychart.cartesian
  * @return {!anychart.charts.Cartesian} Empty chart.
  */
@@ -1602,9 +1697,7 @@ anychart.charts.Cartesian.prototype.draw;
  * @category XML/JSON
  * @example anychart.charts.Cartesian.toJson_asObj Returns JSON as object
  * @example anychart.charts.Cartesian.toJson_asString Returns JSON as string.
- * @example anychart.charts.Cartesian.toJson_asTheme Returns JSON string or object with theme settings.
  * @param {boolean=} opt_stringify [false] Returns JSON as string.
- * @param {boolean=} opt_includeTheme [false] If the current theme properties should be included into the result.
  * @return {Object|string} Chart configuration.
  */
 anychart.charts.Cartesian.prototype.toJson;
@@ -1620,9 +1713,7 @@ anychart.charts.Cartesian.prototype.toJson;
  * @category XML/JSON
  * @example anychart.charts.Cartesian.toXml_asString Returns XML as string.
  * @example anychart.charts.Cartesian.toXml_asNode Returns XMLNode.
- * @example anychart.charts.Cartesian.toXml_asTheme Returns XML string or XMLNode with theme settings.
  * @param {boolean=} opt_asXmlNode [false] Return XML as XMLNode.
- * @param {boolean=} opt_includeTheme [false] If the current theme properties should be included into the result.
  * @return {string|Node} Chart configuration.
  */
 anychart.charts.Cartesian.prototype.toXml;
@@ -2377,69 +2468,7 @@ anychart.charts.Cartesian.prototype.labels;  
 
 //----------------------------------------------------------------------------------------------------------------------
 //
-//  anychart.charts.Cartesian.prototype.hoverLabels
-//  
-//----------------------------------------------------------------------------------------------------------------------
-
-/** 
- * Getter for series data hover labels. 
- * @shortDescription Labels settings. 
- * @category Point Elements 
- * @example anychart.charts.Cartesian.hoverLabels_get
- * @return {anychart.core.ui.LabelsFactory} Labels instance.
- * @since 7.13.1 
- */
- anychart.charts.Cartesian.prototype.hoverLabels;  
-
-/** 
- * Setter for series data hover labels. 
- * @detailed Sets chart hover labels settings depending on parameter type:
- * <ul>
- *   <li><b>null/boolean</b> - disable or enable chart hover labels.</li>
- *   <li><b>object</b> - sets chart hover labels settings.</li>
- * </ul>
- * @example anychart.charts.Cartesian.hoverLabels_set_asBool Enable/Disable chart labels
- * @example anychart.charts.Cartesian.hoverLabels_set_asObj Using object
- * @param {(Object|boolean|null)=} opt_value Series data labels settings.
- * @return {anychart.charts.Cartesian} Self instance for method chaining.
- * @since 7.13.1 
- */
-anychart.charts.Cartesian.prototype.hoverLabels;  
-
-//---------------------------------------------------------------------------------------------------------------------- 
-//
-// anychart.charts.Cartesian.prototype.selectLabels 
-//
-//----------------------------------------------------------------------------------------------------------------------  
-
-/** 
- * Getter for series select data labels. 
- * @shortDescription Labels settings.
- * @category Point Elements 
- * @example anychart.charts.Cartesian.selectLabels_get
- * @return {anychart.core.ui.LabelsFactory} Labels instance. 
- * @since 7.13.1 
- */
-anychart.charts.Cartesian.prototype.selectLabels;
-
-/** 
- * Setter for series select data labels. 
- * @detailed Sets chart select labels settings depending on parameter type:
- * <ul>
- *   <li><b>null/boolean</b> - disable or enable chart select labels.</li>
- *   <li><b>object</b> - sets chart hover labels settings.</li>
- * </ul>
- * @example anychart.charts.Cartesian.selectLabels_set_asBool Enable/Disable chart labels
- * @example anychart.charts.Cartesian.selectLabels_set_asObj Using object
- * @param {(Object|boolean|null)=} opt_value Series data labels settings.
- * @return {anychart.core.ui.LabelsFactory} Labels instance. 
- * @since 7.13.1 
- */
- anychart.charts.Cartesian.prototype.selectLabels;
-
-//----------------------------------------------------------------------------------------------------------------------
-//
-//  anychart.core.Cartesian.prototype.getXScales
+//  anychart.charts.Cartesian.prototype.getXScales
 //
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -2465,6 +2494,184 @@ anychart.charts.Cartesian.prototype.getXScales;
  * @since 7.14.0 
  */
 anychart.charts.Cartesian.prototype.getYScales;
+
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.charts.Cartesian.prototype.normal
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Getter for normal state settings.
+ * @shortDescription Normal state settings.
+ * @category Interactivity
+ * @example anychart.charts.Cartesian.normal_get
+ * @return {anychart.core.StateSettings} Normal state settings.
+ * @since 8.0.0
+ */
+anychart.charts.Cartesian.prototype.normal;
+
+/**
+ * Setter for normal state settings.
+ * @example anychart.charts.Cartesian.normal_set
+ * @param {!Object=} opt_value State settings to set.
+ * @return {anychart.charts.Cartesian} Self instance for method chaining.
+ * @since 8.0.0
+ */
+anychart.charts.Cartesian.prototype.normal;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.charts.Cartesian.prototype.hovered
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Getter for hovered state settings.
+ * @shortDescription Hovered state settings.
+ * @category Interactivity
+ * @example anychart.charts.Cartesian.hovered_get
+ * @return {anychart.core.StateSettings} Hovered state settings
+ * @since 8.0.0
+ */
+anychart.charts.Cartesian.prototype.hovered;
+
+/**
+ * Setter for hovered state settings.
+ * @example anychart.charts.Cartesian.hovered_set
+ * @param {!Object=} opt_value State settings to set.
+ * @return {anychart.charts.Cartesian} Self instance for method chaining.
+ * @since 8.0.0
+ */
+anychart.charts.Cartesian.prototype.hovered;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.charts.Cartesian.prototype.selected
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Getter for selected state settings.
+ * @shortDescription Selected state settings.
+ * @category Interactivity
+ * @example anychart.charts.Cartesian.selected_get
+ * @return {anychart.core.StateSettings} Selected state settings
+ * @since 8.0.0
+ */
+anychart.charts.Cartesian.prototype.selected;
+
+/**
+ * Setter for selected state settings.
+ * @example anychart.charts.Cartesian.selected_set
+ * @param {!Object=} opt_value State settings to set.
+ * @return {anychart.charts.Cartesian} Self instance for method chaining.
+ * @since 8.0.0
+ */
+anychart.charts.Cartesian.prototype.selected;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.core.series.Base.prototype.isVertical
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Getter for the layout direction.
+ * @listing See listing
+ * var flag = chart.isVertical();
+ * @return {boolean} The flag of the series layout direction.
+ * @since 7.13.0
+ */
+anychart.charts.Cartesian.prototype.isVertical;
+
+/**
+ * Setter for the layout direction.
+ * @example anychart.charts.Cartesian.isVertical_set
+ * @param {(boolean|null)=} opt_value [false] Whether to change the chart layout direction to vertical.
+ * @return {anychart.charts.Cartesian} Self instance for method chaining.
+ * @since 7.13.0
+ */
+anychart.charts.Cartesian.prototype.isVertical;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.charts.Cartesian.prototype.pointWidth
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Getter for the point width settings.
+ * @shortDescription Point width settings.
+ * @category Specific settings
+ * @listing See listing
+ * var pointWidth = chart.pointWidth();
+ * @return {string|number} The point width pixel value.
+ * @since 8.0.0
+ */
+anychart.charts.Cartesian.prototype.pointWidth;
+
+/**
+ * Setter for the point width settings.
+ * @example anychart.charts.Cartesian.pointWidth_set
+ * @param {(number|string)=} opt_value Point width pixel value.
+ * @return {anychart.charts.Cartesian} Self instance for method chaining.
+ * @since 8.0.0
+ */
+anychart.charts.Cartesian.prototype.pointWidth;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.charts.Cartesian.prototype.maxPointWidth
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Getter for the maximum point width.
+ * @shortDescription Maximum point width settings.
+ * @category Specific settings
+ * @listing See listing
+ * var maxPointWidth = chart.maxPointWidth();
+ * @return {string|number} The maximum point width pixel value.
+ * @since 8.0.0
+ */
+anychart.charts.Cartesian.prototype.maxPointWidth;
+
+/**
+ * Setter for the maximum point width.
+ * @example anychart.charts.Cartesian.maxPointWidth
+ * @param {(number|string)=} opt_value Point width pixel value.
+ * @return {anychart.charts.Cartesian} Self instance for method chaining.
+ * @since 8.0.0
+ */
+anychart.charts.Cartesian.prototype.maxPointWidth;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.charts.Cartesian.prototype.minPointLength
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Getter for the minimum point length.
+ * @shortDescription Minimum point length settings.
+ * @category Specific settings
+ * @listing See listing
+ * var minPointLength = chart.minPointLength();
+ * @return {string|number} The minimum point length pixel value.
+ * @since 8.0.0
+ */
+anychart.charts.Cartesian.prototype.minPointLength;
+
+/**
+ * Setter for the minimum point length.
+ * @example anychart.charts.Cartesian.minPointLength
+ * @param {(number|string)=} opt_value Minimum point length pixel value.
+ * @return {anychart.charts.Cartesian} Self instance for method chaining.
+ * @since 8.0.0
+ */
+anychart.charts.Cartesian.prototype.minPointLength;
 
 
 //----------------------------------------------------------------------------------------------------------------------
@@ -2526,3 +2733,9 @@ anychart.charts.Cartesian.prototype.inMarquee;
 
 /** @inheritDoc */
 anychart.charts.Cartesian.prototype.cancelMarquee;
+
+/** @inheritDoc */
+anychart.charts.Cartesian.prototype.noData;
+
+/** @inheritDoc */
+anychart.charts.Cartesian.prototype.exports;

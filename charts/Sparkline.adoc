@@ -18,7 +18,7 @@ anychart.charts.Sparkline;
  * @shortDescription X-scale settings.
  * @category Axes and Scales
  * @example anychart.charts.Sparkline.xScale_get
- * @return {!anychart.scales.Base} Default chart scale value.
+ * @return {anychart.scales.Ordinal} Default chart scale value.
  */
 anychart.charts.Sparkline.prototype.xScale;
 
@@ -27,7 +27,7 @@ anychart.charts.Sparkline.prototype.xScale;
  * <b>Note:</b> This scale will be passed to all scale dependent chart elements if they don't have their own scales.
  * @example anychart.charts.Sparkline.xScale_set_asString Using string
  * @example anychart.charts.Sparkline.xScale_set_asInst Using instance
- * @param {(anychart.enums.ScaleTypes|anychart.scales.Base)=} opt_value ["ordinal"] X-scale to set.
+ * @param {(anychart.enums.ScaleTypes|string|anychart.scales.Base|Object)=} opt_value ["ordinal"] X-scale to set.
  * @return {anychart.charts.Sparkline} Self instance for method chaining.
  */
 anychart.charts.Sparkline.prototype.xScale;
@@ -53,7 +53,7 @@ anychart.charts.Sparkline.prototype.yScale;
  * <b>Note:</b> This scale will be passed to all scale dependent chart elements if they don't have their own scales.
  * @example anychart.charts.Sparkline.yScale_set_asString Using string
  * @example anychart.charts.Sparkline.yScale_set_asInst Using instance
- * @param {(anychart.enums.ScaleTypes|anychart.scales.Base)=} opt_value ["linear"] Y Scale to set.
+ * @param {(anychart.enums.ScaleTypes|string|anychart.scales.Base|Object)=} opt_value ["linear"] Y Scale to set.
  * @return {anychart.charts.Sparkline} Self instance for method chaining.
  */
 anychart.charts.Sparkline.prototype.yScale;
@@ -235,18 +235,18 @@ anychart.charts.Sparkline.prototype.data;
  * Getter for the sparkline series type.
  * @shortDescription Series type.
  * @category Series
- * @example anychart.charts.Sparkline.type_get
+ * @example anychart.charts.Sparkline.seriesType_get
  * @return {string|anychart.enums.SparklineSeriesType} Sparkline series type.
  */
-anychart.charts.Sparkline.prototype.type;
+anychart.charts.Sparkline.prototype.seriesType;
 
 /**
  * Setter for the sparkline series type.
- * @example anychart.charts.Sparkline.type_set
+ * @example anychart.charts.Sparkline.seriesType_set
  * @param {(string|anychart.enums.SparklineSeriesType)=} opt_type ["line"] Series type.
  * @return {anychart.charts.Sparkline} Self instance for method chaining.
  */
-anychart.charts.Sparkline.prototype.type;
+anychart.charts.Sparkline.prototype.seriesType;
 
 
 //----------------------------------------------------------------------------------------------------------------------
@@ -1521,3 +1521,9 @@ anychart.charts.Sparkline.prototype.inMarquee;
 
 /** @inheritDoc */
 anychart.charts.Sparkline.prototype.cancelMarquee;
+
+/** @inheritDoc */
+anychart.charts.Sparkline.prototype.exports;
+
+/** @inheritDoc */
+anychart.charts.Sparkline.prototype.noData;

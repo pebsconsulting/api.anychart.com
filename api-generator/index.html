@@ -4,12 +4,10 @@
     <meta name="x-cat-tags" content="actualBug"/>
     <script src="../../ACDVF/libs/closure-library/closure/goog/base.js"></script>
     <script src="../../ACDVF/src/deps.js"></script>
-    <link href="../../ACDVF/out/anychart-ui.min.css" type="text/css" rel="stylesheet">
     <script>
-        goog.require("anychart.themes.defaultTheme");
-        goog.require("anychart.modules.anychart_bundle");
+        goog.require("anychart.bundle.entry");
+        goog.require("anychart.themes.defaultTheme.entry");
     </script>
-    <script src="utils/anytest.min.js"></script>
 </head>
 <body>
 <div id="container"></div>
@@ -46,7 +44,7 @@
 
     var walkingMap = {};
     function objectResearch(obj, path){
-        if (walkingMap[path]) return;
+        if (walkingMap[path] || obj == window || obj == document) return;
         walkingMap[path] = true;
         if (!result[path]) result[path]=getResultTemplate();
         for(var p in obj){
