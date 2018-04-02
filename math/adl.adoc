@@ -2,7 +2,7 @@
  * Namespace anychart.math.adl<br/>
  * {docs:Stock_Charts/Technical_Indicators/Mathematical_Description}Learn more about indicator mathematics.{docs}<br/>
  * {api:anychart#DEVELOP}Develop const API sample{api} <br/>
- * {pg:_samples/anychart.DEVELOP}PG sample.{pg} <br/>
+ * {pg:_samples/anychart.DEVELOP}PG sample{pg} <br/>
  * @namespace {anychart.math.adl}
  * @name anychart.math.adl
  */
