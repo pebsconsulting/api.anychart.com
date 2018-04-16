@@ -84,7 +84,7 @@ anychart.scales.Calendar.prototype.availabilities;
 /**
  * Setter for the availabilities for the calendar.
  * @example anychart.scales.Calendar.availabilities
- * @param {Array.<anychart.scales.Calendar.Availability>} opt_value Array of availabilities. Next availability has more priority than previous.
+ * @param {Array.<anychart.scales.Calendar.Availability|Object>} opt_value Array of availabilities. Next availability has more priority than previous.
  * @return {anychart.scales.Calendar} Self instance for method chaining.
  * @since 7.12.0
  */

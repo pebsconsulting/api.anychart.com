@@ -102,7 +102,7 @@ anychart.core.ui.Background.prototype.fill;
  * e.g. "red 0.5".
  * @example anychart.core.ui.Background.fill_set_asString Using string
  * @example anychart.core.ui.Background.fill_set_asImg Using image.
- * @param {anychart.graphics.vector.Fill} value ["#fff"] Fill as an object or a string.
+ * @param {(anychart.graphics.vector.Fill|Object)} value ["#fff"] Fill as an object or a string.
  * @return {anychart.core.ui.Background} Self instance for method chaining.
  * */
 anychart.core.ui.Background.prototype.fill;
