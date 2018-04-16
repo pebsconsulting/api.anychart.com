@@ -748,6 +748,36 @@ anychart.charts.Resource.prototype.currentStartDate;
  */
 anychart.charts.Resource.prototype.currentStartDate;
 
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.charts.Resource.prototype.resourceList
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Getter for the resource list.
+ * @shortDescription Resource list settings.
+ * @category Specific settings
+ * @example anychart.charts.Resource.resourceList_get
+ * @return {anychart.core.resource.ResourceList} Resource list.
+ */
+anychart.charts.Resource.prototype.resourceList;
+
+/**
+ * Setter for the resource list.
+ * @detailed Sets resource list settings depending on parameter type:
+ * <ul>
+ *   <li><b>null/boolean</b> - disable or enable resource list.</li>
+ *   <li><b>object</b> - sets resource list settings.</li>
+ *   <li><b>string</b> - sets resource list settings.</li>
+ * </ul>
+ * @example anychart.charts.Resource.resourceList_set_asBool Enable/disable resource list
+ * @example anychart.charts.Resource.resourceList_set_asObj Using object
+ * @param {(string|Object|null|boolean)=} opt_settings Resource list settings to set.
+ * @return {anychart.charts.Resource}
+ */
+anychart.charts.Resource.prototype.resourceList;
+
 /** @inheritDoc */
 anychart.charts.Resource.prototype.getType;
 
