@@ -621,56 +621,99 @@ anychart.enums.SidePosition.CENTER = "center";
  */
 anychart.enums.EventType;
 
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  Animation event types
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * The type of event to start the animation.
+ * @enumcategory Animation event types
+ * @enumexample anychart.enums.EventType.animation AnimationStart
+ */
+anychart.enums.EventType.ANIMATION_START = "animationStart";
+
+/**
+ * The type of event to finish the animation.
+ * @enumcategory Animation events
+ * @enumexample anychart.enums.EventType.animation AnimationEnd
+ */
+anychart.enums.EventType.ANIMATION_END = "animationEnd";
+
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  Point event types
+//
+//----------------------------------------------------------------------------------------------------------------------
+
 /**
  * Event type for point at leading off mouse.
+ * @enumcategory Point event types
+ * @enumexample anychart.enums.EventType.point_pointmouse_over_out PointMouseOut
  */
 anychart.enums.EventType.POINT_MOUSE_OUT = "pointMouseOut";
 
 /**
- * Event type for point at move mouse.
+ * Event type for point at hover mouse.
+ * @enumcategory Point event types
+ * @enumexample anychart.enums.EventType.point_pointmouse_over_out PointMouseOver
+ */
+anychart.enums.EventType.POINT_MOUSE_OVER = "pointMouseOver";
+
+/**
+ * The type of event to move with the mouse on the point.
+ * @enumcategory Point event types
+ * @enumexample anychart.enums.EventType.pointmousemove_dblclick PointMouseMove
  */
 anychart.enums.EventType.POINT_MOUSE_MOVE = "pointMouseMove";
 
 /**
+ * The type of event for double-clicking a point.
+ * @enumcategory Point event types
+ * @enumexample anychart.enums.EventType.pointmousemove_dblclick PointDblclick
+ */
+anychart.enums.EventType.POINT_DBLCLICK = "pointDblclick";
+
+/**
  * Event type for point at down mouse.
+ * @enumcategory Point event types
  */
 anychart.enums.EventType.POINT_MOUSE_DOWN = "pointMouseDown";
 
 /**
  * Event type for point at up mouse.
+ * @enumcategory Point event types
  */
 anychart.enums.EventType.POINT_MOUSE_UP = "pointMouseUp";
 
 /**
- * Event type for point at hover mouse.
- */
-anychart.enums.EventType.POINT_MOUSE_OVER = "pointMouseOver";
-
-/**
  * Event type for click on point.
+ * @enumcategory Point event types
  */
 anychart.enums.EventType.POINT_CLICK = "pointClick";
 
-/**
- * Event type for double click on point.
- */
-anychart.enums.EventType.POINT_DBLCLICK = "pointDblclick";
-
-/**
- * @ignoreDoc It is deprecated.
- * Event type for double hover on point.
- */
-anychart.enums.EventType.POINT_HOVER = "pointHover";
 
 /**
  * Event type for select on points.
+ * @enumcategory Point event types
  */
 anychart.enums.EventType.POINTS_SELECT = "pointsSelect";
 
 /**
  * Event type for hover on points.
+ * @enumcategory Point event types
  */
 anychart.enums.EventType.POINTS_HOVER = "pointsHover";
+
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//
+//
+//----------------------------------------------------------------------------------------------------------------------
+
 
 /**
  * Event type for drawing chart.
@@ -781,16 +824,6 @@ anychart.enums.EventType.ROW_MOUSE_DOWN = "rowMouseDown";
  * Event type for up mouse on row.
  */
 anychart.enums.EventType.ROW_MOUSE_UP = "rowMouseUp";
-
-/**
- * Event type for animation start.
- */
-anychart.enums.EventType.ANIMATION_START = "animationStart";
-
-/**
- * Event type for animation finish.
- */
-anychart.enums.EventType.ANIMATION_END = "animationEnd";
 
 /**
  * Event type for scroller change start.
