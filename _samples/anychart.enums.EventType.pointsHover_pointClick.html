@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="ac:name" content="anychart.enums.EventType.point pointmouse over out"/>
+    <meta name="ac:name" content="anychart.enums.EventType.pointsHover pointClick"/>
     <meta name="ac:short-desc" content=""/>
     <meta name="ac:desc" content=""/>
     <script src="https://cdn.anychart.com/releases/{{branch-name}}/js/anychart-base.min.js"></script>
@@ -32,17 +32,21 @@
             {x: "Alpinism", value: 9}
         ]);
 
+        series.hovered({fill: "#F44336"});
+
         var title = chart.title();
         title.enabled(true);
         title.text("");
 
         // Set event type.
-        series.listen("pointmouseover", function (e) {
-            title.text("Point index is " + e.pointIndex);
+        // Hover the point.
+        chart.listen("pointsHover", function (e) {
+            title.text("You hovered a point with index " + e.point.index)
         });
 
         // Set event type.
-        series.listen("pointmouseout", function (e) {
+        // Click the point.
+        chart.listen("pointClick", function () {
             title.text("");
         });
 

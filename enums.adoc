@@ -638,7 +638,7 @@ anychart.enums.EventType.ANIMATION_START = "animationStart";
 /**
  * The type of event to finish the animation.<br/>
  * Works for {api:anychart.charts} all charts{api} that use the {@link anychart.core.Chart#animation} method.
- * @enumcategory Animation events
+ * @enumcategory Animation event types
  * @enumexample anychart.enums.EventType.animation AnimationEnd
  */
 anychart.enums.EventType.ANIMATION_END = "animationEnd";
@@ -662,7 +662,7 @@ anychart.enums.EventType.POINT_MOUSE_OUT = "pointMouseOut";
  * Event type for point at hover mouse.<br/>
  * Works for all charts and series that use the getPoint() method.
  * @enumcategory Point event types
- * @enumexample anychart.enums.EventType.point_pointmouse_over_out PointMouseOver
+ * @enumexample anychart.enums.EventType.pointmouse_over_out PointMouseOver
  */
 anychart.enums.EventType.POINT_MOUSE_OVER = "pointMouseOver";
 
@@ -683,43 +683,45 @@ anychart.enums.EventType.POINT_MOUSE_MOVE = "pointMouseMove";
 anychart.enums.EventType.POINT_DBLCLICK = "pointDblclick";
 
 /**
- * Event type for point at down mouse.
+ * Event type for point at down mouse.<br/>
+ * Works for all charts and series that use the getPoint() method.
  * @enumcategory Point event types
+ * @enumexample anychart.enums.EventType.pointMouseDown_pointMouseUp PointMouseDown
  */
 anychart.enums.EventType.POINT_MOUSE_DOWN = "pointMouseDown";
 
 /**
- * Event type for point at up mouse.
+ * Event type for point at up mouse.<br/>
+ * Works for all charts and series that use the getPoint() method.
  * @enumcategory Point event types
+ * @enumexample anychart.enums.EventType.pointMouseDown_pointMouseUp PointMouseUp
  */
 anychart.enums.EventType.POINT_MOUSE_UP = "pointMouseUp";
 
 /**
- * Event type for click on point.
+ * Event type for hover on points.<br/>
+ * Works for all charts and series that use the getPoint() method.
  * @enumcategory Point event types
- */
-anychart.enums.EventType.POINT_CLICK = "pointClick";
-
-
-/**
- * Event type for select on points.
- * @enumcategory Point event types
- */
-anychart.enums.EventType.POINTS_SELECT = "pointsSelect";
-
-/**
- * Event type for hover on points.
- * @enumcategory Point event types
+ * @enumexample anychart.enums.EventType.pointsHover_pointClick PointsHover
  */
 anychart.enums.EventType.POINTS_HOVER = "pointsHover";
 
 
-//----------------------------------------------------------------------------------------------------------------------
-//
-//
-//
-//----------------------------------------------------------------------------------------------------------------------
+/**
+ * Event type for click on point.<br/>
+ * Works for all charts and series that use the getPoint() method.
+ * @enumcategory Point event types
+ * @enumexample anychart.enums.EventType.pointsHover_pointClick PointClick
+ */
+anychart.enums.EventType.POINT_CLICK = "pointClick";
 
+/**
+ * Event type for select on points.<br/>
+ * Works for all charts and series that use the getPoint() method.
+ * @enumcategory Point event types
+ * @enumexample anychart.enums.EventType.pointsSelect PointsSelect
+ */
+anychart.enums.EventType.POINTS_SELECT = "pointsSelect";
 
 /**
  * Event type for drawing chart.

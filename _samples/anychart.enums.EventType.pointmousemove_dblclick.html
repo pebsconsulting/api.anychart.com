@@ -40,10 +40,10 @@
             {x: "P15", value: 120}
         ]);
 
-        var chart = anychart.line();
+        var chart = anychart.column();
         chart.title("Move the Mouse to Add Points, DoubleClick to stop it");
 
-        chart.line(dataSet);
+        chart.column(dataSet);
 
         var xAxis = chart.xAxis();
         xAxis.staggerMode(false);
@@ -60,11 +60,11 @@
         };
 
         // Set event type to mouseMove.
-        var key = chart.listen("mousemove", func_listen);
+        var key = chart.listen("pointMouseMove", func_listen);
 
         // Set the event type for a double click.
         // Click twice on any range bar to see the result
-        chart.listen("dblclick", function () {
+        chart.listen("pointDblClick", function () {
             chart.unlistenByKey(key);
         });
 
