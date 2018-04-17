@@ -628,14 +628,16 @@ anychart.enums.EventType;
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * The type of event to start the animation.
+ * The type of event to start the animation.<br/>
+ * Works for {api:anychart.charts} all charts{api} that use the {@link anychart.core.Chart#animation} method.
  * @enumcategory Animation event types
  * @enumexample anychart.enums.EventType.animation AnimationStart
  */
 anychart.enums.EventType.ANIMATION_START = "animationStart";
 
 /**
- * The type of event to finish the animation.
+ * The type of event to finish the animation.<br/>
+ * Works for {api:anychart.charts} all charts{api} that use the {@link anychart.core.Chart#animation} method.
  * @enumcategory Animation events
  * @enumexample anychart.enums.EventType.animation AnimationEnd
  */
@@ -649,28 +651,32 @@ anychart.enums.EventType.ANIMATION_END = "animationEnd";
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * Event type for point at leading off mouse.
+ * Event type for point at leading off mouse.<br/>
+ * Works for all charts and series that use the getPoint() method.
  * @enumcategory Point event types
  * @enumexample anychart.enums.EventType.point_pointmouse_over_out PointMouseOut
  */
 anychart.enums.EventType.POINT_MOUSE_OUT = "pointMouseOut";
 
 /**
- * Event type for point at hover mouse.
+ * Event type for point at hover mouse.<br/>
+ * Works for all charts and series that use the getPoint() method.
  * @enumcategory Point event types
  * @enumexample anychart.enums.EventType.point_pointmouse_over_out PointMouseOver
  */
 anychart.enums.EventType.POINT_MOUSE_OVER = "pointMouseOver";
 
 /**
- * The type of event to move with the mouse on the point.
+ * The type of event to move with the mouse on the point.<br/>
+ * Works for all charts and series that use the getPoint() method.
  * @enumcategory Point event types
  * @enumexample anychart.enums.EventType.pointmousemove_dblclick PointMouseMove
  */
 anychart.enums.EventType.POINT_MOUSE_MOVE = "pointMouseMove";
 
 /**
- * The type of event for double-clicking a point.
+ * The type of event for double-clicking a point.<br/>
+ * Works for all charts and series that use the getPoint() method.
  * @enumcategory Point event types
  * @enumexample anychart.enums.EventType.pointmousemove_dblclick PointDblclick
  */
