@@ -638,7 +638,7 @@ anychart.enums.EventType.ANIMATION_START = "animationStart";
 /**
  * The type of event to finish the animation.<br/>
  * Works for {api:anychart.charts} all charts{api} that use the {@link anychart.core.Chart#animation} method.
- * @enumcategory Animation events
+ * @enumcategory Animation event types
  * @enumexample anychart.enums.EventType.animation AnimationEnd
  */
 anychart.enums.EventType.ANIMATION_END = "animationEnd";
