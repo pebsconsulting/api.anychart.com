@@ -706,7 +706,6 @@ anychart.enums.EventType.POINT_MOUSE_UP = "pointMouseUp";
  */
 anychart.enums.EventType.POINTS_HOVER = "pointsHover";
 
-
 /**
  * Event type for click on point.<br/>
  * Works for all charts and series that use the getPoint() method.
@@ -722,12 +721,6 @@ anychart.enums.EventType.POINT_CLICK = "pointClick";
  * @enumexample anychart.enums.EventType.pointsSelect PointsSelect
  */
 anychart.enums.EventType.POINTS_SELECT = "pointsSelect";
-
-/**
- * Event type for hover on points.
- * @enumcategory Point event types
- */
-anychart.enums.EventType.POINTS_HOVER = "pointsHover";
 
 
 //----------------------------------------------------------------------------------------------------------------------
