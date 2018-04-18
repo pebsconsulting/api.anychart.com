@@ -716,15 +716,10 @@ anychart.enums.EventType.POINTS_HOVER = "pointsHover";
 
 //----------------------------------------------------------------------------------------------------------------------
 //
-//
+// Legend item event types
 //
 //----------------------------------------------------------------------------------------------------------------------
 
-
-/**
- * Event type for drawing chart.
- */
-anychart.enums.EventType.CHART_DRAW = "chartDraw";
 
 /**
  * Event type for item of legend at leading off mouse.
@@ -761,6 +756,13 @@ anychart.enums.EventType.LEGEND_ITEM_DBLCLICK = "legendItemDblclick";
  */
 anychart.enums.EventType.LEGEND_ITEM_CLICK = "legendItemClick";
 
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  Drag event types
+//
+//----------------------------------------------------------------------------------------------------------------------
+
 /**
  * Event type for moving of legend.
  */
@@ -776,20 +778,34 @@ anychart.enums.EventType.DRAG_START = "dragStart";
  */
 anychart.enums.EventType.DRAG_END = "dragEnd";
 
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  Scroll event types
+//
+//----------------------------------------------------------------------------------------------------------------------
+
 /**
  * Event type for change scroll.
  */
 anychart.enums.EventType.SCROLL_CHANGE = "scrollChange";
 
 /**
- * Event type for change splitter.
+ * Event type for scrolling.
  */
-anychart.enums.EventType.SPLITTER_CHANGE = "splitterChange";
+anychart.enums.EventType.SCROLLING = "scrolling";
 
 /**
- * Event type for signal.
+ * Event type for scroll end.
  */
-anychart.enums.EventType.SIGNAL = "signal";
+anychart.enums.EventType.SCROLL_END = "scrollEnd";
+
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  Grids event types
+//
+//----------------------------------------------------------------------------------------------------------------------
 
 /**
  * Event type for click on row.
@@ -832,6 +848,23 @@ anychart.enums.EventType.ROW_MOUSE_DOWN = "rowMouseDown";
 anychart.enums.EventType.ROW_MOUSE_UP = "rowMouseUp";
 
 /**
+ * The grid event type to collapse or expand of a row.
+ */
+anychart.enums.EventType.ROW_COLLAPSE_EXPAND = "rowCollapseExpand";
+
+/**
+ * Grid event type for before create connector.
+ */
+anychart.enums.EventType.BEFORE_CREATE_CONNECTOR = "beforeCreateConnector";
+
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  Scroller change event type
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
  * Event type for scroller change start.
  */
 anychart.enums.EventType.SCROLLER_CHANGE_START = "scrollerchangestart";
@@ -845,6 +878,13 @@ anychart.enums.EventType.SCROLLER_CHANGE = "scrollerchange";
  * Event type for scroller change finish.
  */
 anychart.enums.EventType.SCROLLER_CHANGE_FINISH = "scrollerChangeFinish";
+
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  Selected range event types
+//
+//----------------------------------------------------------------------------------------------------------------------
 
 /**
  * Event type for selected range change start.
@@ -866,10 +906,12 @@ anychart.enums.EventType.SELECTED_RANGE_CHANGE = "selectedRangeChange";
  */
 anychart.enums.EventType.SELECTED_RANGE_CHANGE_FINISH = "selectedRangeChangeFinish";
 
-/**
- * Grid event type for before create connector.
- */
-anychart.enums.EventType.BEFORE_CREATE_CONNECTOR = "beforeCreateConnector";
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  Data tree CRUD event types
+//
+//----------------------------------------------------------------------------------------------------------------------
 
 /**
  * Data tree CRUD event type for tree item move.
@@ -891,10 +933,12 @@ anychart.enums.EventType.TREE_ITEM_CREATE = "treeItemCreate";
  */
 anychart.enums.EventType.TREE_ITEM_REMOVE = "treeItemRemove";
 
-/**
- * Event type for the drill.
- */
-anychart.enums.EventType.DRILL_CHANGE = "drillChange";
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  Zoom event types
+//
+//----------------------------------------------------------------------------------------------------------------------
+
 
 /**
  * Event type for the zoom start.
@@ -911,6 +955,12 @@ anychart.enums.EventType.ZOOM = "zoom";
  */
 anychart.enums.EventType.ZOOM_END = "zoomEnd";
 
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  UI event types
+//
+//----------------------------------------------------------------------------------------------------------------------
+
 /**
  * Event type for the "close".
  */
@@ -920,6 +970,12 @@ anychart.enums.EventType.CLOSE = "close";
  * Event type for the "complete".
  */
 anychart.enums.EventType.COMPLETE = "complete";
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  Annotation event types
+//
+//----------------------------------------------------------------------------------------------------------------------
 
 /**
  * Event type for the annotation select.
@@ -950,6 +1006,13 @@ anychart.enums.EventType.ANNOTATION_CHANGE = "annotationChange";
  * Event type for the annotation change finish.
  */
 anychart.enums.EventType.ANNOTATION_CHANGE_FINISH = "annotationChangeFinish";
+
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  Connectors event types
+//
+//----------------------------------------------------------------------------------------------------------------------
 
 /**
  * Event type for the connector select.
@@ -991,6 +1054,13 @@ anychart.enums.EventType.CONNECTOR_MOUSE_DOWN = "connectorMouseDown";
  */
 anychart.enums.EventType.CONNECTOR_MOUSE_UP = "connectorMouseUp";
 
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  Marquee event types
+//
+//----------------------------------------------------------------------------------------------------------------------
+
 /**
  * Event type for the select marquee start.
  */
@@ -1006,6 +1076,13 @@ anychart.enums.EventType.SELECT_MARQUEE_CHANGE = "selectMarqueeChange";
  */
 anychart.enums.EventType.SELECT_MARQUEE_FINISH = "selectMarqueeFinish";
 
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  Data changed event type for no data label
+//
+//----------------------------------------------------------------------------------------------------------------------
+
 /**
  * Event type when the data changes.<br/>
  * The event is called when the chart engine determines there is nothing to show,
@@ -1015,6 +1092,13 @@ anychart.enums.EventType.SELECT_MARQUEE_FINISH = "selectMarqueeFinish";
  * {docs:Working_with_Data/No_Data_Label} Learn more about "No data" feature {docs}
  */
 anychart.enums.EventType.DATA_CHANGED = "dataChanged";
+
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  Event marker types
+//
+//----------------------------------------------------------------------------------------------------------------------
 
 /**
  * 	Event type for the marker mouse over.
@@ -1060,6 +1144,40 @@ anychart.enums.EventType.EVENT_MARKERS_HOVER = 'eventMarkersHover';
  * Event type for select on markers.
  */
 anychart.enums.EventType.EVENT_MARKERS_SELECT = 'eventMarkersSelect';
+
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Event type for signal.
+ */
+anychart.enums.EventType.SIGNAL = "signal";
+
+/**
+ * Event type for change splitter.
+ */
+anychart.enums.EventType.SPLITTER_CHANGE = "splitterChange";
+
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  Chart draw event type
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Event type for drawing chart.
+ */
+anychart.enums.EventType.CHART_DRAW = "chartDraw";
+
+/**
+ * Event type for the drill.
+ */
+anychart.enums.EventType.DRILL_CHANGE = "drillChange";
 
 
 //----------------------------------------------------------------------------------------------------------------------
