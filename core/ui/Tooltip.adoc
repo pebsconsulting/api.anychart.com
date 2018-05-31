@@ -1045,7 +1045,7 @@ anychart.core.ui.Tooltip.prototype.titleFormat;
 
 /**
  * Getter for the useHTML flag.
- * @shortDescription Use HTML option.
+ * @shortDescription Enable/Disable HTML tooltip.
  * @category Content Text Settings
  * @listing See listing
  * var tooltip = chart.tooltip();
@@ -1056,9 +1056,11 @@ anychart.core.ui.Tooltip.prototype.titleFormat;
 anychart.core.ui.Tooltip.prototype.useHtml;
 
 /**
- * Setter for the useHTML flag.
- * @example anychart.core.ui.Tooltip.useHtml_set
- * @param {boolean} opt_value Value to set.
+ * Setter for the HTML tooltip.<br/>
+ * To work with the HTML tooltip you need to reference the CSS file from AnyChart CDN.
+ * (https://cdn.anychart.com/releases/latest/css/anychart-ui.min.css for latest or https://cdn.anychart.com/releases/8.3.0/css/anychart-ui.min.css for the versioned file)
+ * @example anychart.core.ui.Tooltip.useHtml
+ * @param {boolean} opt_value [false] Value to set.
  * @return {anychart.core.ui.Tooltip} Self instance for method chaining.
  * @since 7.12.0
  */
@@ -1159,7 +1161,7 @@ anychart.core.ui.Tooltip.prototype.valuePrefix;
  * @listing See listing
  * var tooltipSettings = chart.tooltip();
  * var formatter = tooltipSettings.unionFormat();
- * @return {Function|string} Function to format title text.
+ * @return {function|string} Function to format title text.
  * @since 7.12.0
  */
 anychart.core.ui.Tooltip.prototype.unionFormat;
@@ -1168,7 +1170,25 @@ anychart.core.ui.Tooltip.prototype.unionFormat;
  * Setter for the function content text for union tooltip.<br/>
  * {docs:Common_Settings/Text_Formatters}Learn more about using unionFormat() method.{docs}
  * @example anychart.core.ui.Tooltip.unionFormat
- * @param {(Function|string)=} opt_value Function or string token to format content text.
+ * @param {(function():string|string)=} opt_unionFormat Function or string token ('{%joinedFormattedValues}') to format content text.
+ * UnionFormat-function that looks like:<code>function() {
+ *   // this.clientX - X coordinate of the mouse. Type is number
+ *   // this.clientY - Y coordinate of the mouse. Type is number
+ *   // this.dataIntervalUnit - Interval unit. Type is string
+ *   // this.dataIntervalUnitCount - Interval unit count. Type is number
+ *   // this.formattedValues - Formatted values for the tooltip. Type is array of the string
+ *   // this.hoveredDate - Type is number
+ *   // this.isGrouped - Type is boolean
+ *   // this.joinedFormattedValues - Formatted values for the join through <br> and '/n' (if tooltip.useHtml() is set to true, it parses the <br> tag, if tooltip.useHtml() is set to false, it parses '/n'). Type is string
+ *   // this.name - Name. Type is string
+ *   // this.points - Series points. Type is array
+ *   // this.rawHoveredDate - Type is number
+ *   // this.titleText - Tooltip title text. Type is number
+ *   // this.valuePostfix - Postfix value. Type is number
+ *   // this.valuePrefix - Prefix value. Type is number
+ *   // this.x - The current x. Type is number
+ *   }
+ *  return unionFormat // string
  * @return {anychart.core.ui.Tooltip} Self instance for method chaining.
  * @since 7.12.0
  */
