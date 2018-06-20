@@ -24,12 +24,13 @@
     anychart.onDocumentReady(function () {
         var stage = anychart.graphics.create("container");
 
-        var chart = anychart.line([
-            {x: "January", value: 49},
-            {x: "February", value: 45},
-            {x: "March", value: 9},
-            {x: "April", value: 4},
-            {x: "May", value: 17}
+        var chart = anychart.bar();
+
+        chart.rangeBar([
+            {x: "Development", low: Date.UTC(2000, 1, 1), high: Date.UTC(2002, 2, 15)},
+            {x: "Internal Testing", low: Date.UTC(2001, 6, 1), high: Date.UTC(2003, 7, 1), fill: "#1976D2"},
+            {x: "Field Tests", low: Date.UTC(2002, 2, 25), high: Date.UTC(2003, 7, 1), fill: "#EF6C00"},
+            {x: "Licensing", low: Date.UTC(2003, 7, 1), high: Date.UTC(2004, 7, 1), fill: "#FFD54F"}
         ]);
         chart.left("5%");
         chart.title("Save chart as CSV file");
@@ -45,9 +46,17 @@
         customLabel.listen("click", function () {
 
             // Save into CSV file.
-            chart.saveAsCsv("raw", {"rowsSeparator": " ", "columnsSeparator": ","}, "ChartCSV");
+            chart.saveAsCsv("raw", csvSettings, "ChartCSV");
 
         });
+
+        var csvSettings = {
+            formats: function(header, val) {
+                if (header == 'low' || header == 'high')
+                    return anychart.format.dateTime(val, 'yyyy-MMM-dd');
+                return val;
+            }
+        };
 
         customLabel.listen("mouseOver", function () {
             document.body.style.cursor = "pointer";
