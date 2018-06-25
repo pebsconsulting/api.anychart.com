@@ -1058,13 +1058,190 @@ anychart.core.ui.Tooltip.prototype.useHtml;
 /**
  * Setter for the HTML tooltip.<br/>
  * To work with the HTML tooltip you need to reference the CSS file from AnyChart CDN.
- * (https://cdn.anychart.com/releases/latest/css/anychart-ui.min.css for latest or https://cdn.anychart.com/releases/8.3.0/css/anychart-ui.min.css for the versioned file)
+ * (https://cdn.anychart.com/releases/{{branch-name}}/css/anychart-ui.min.css for latest or https://cdn.anychart.com/releases/{{branch-name}}/css/anychart-ui.min.css for the versioned file)<br/>
+ * The inner HTML-tooltip elements have the following default structure:
+ * <code>
+ *      <div class="anychart-tooltip"> // The basic HTML-element. The parent DIV of the entire element.
+ *      <div class="anychart-tooltip-title"></div> // The title element.
+ *      <hr noshade="true" class="anychart-tooltip-separator"> // The tooltip separator element.
+ *      <div></div> // The content element.
+ *      </div>
+ * </code>
  * @example anychart.core.ui.Tooltip.useHtml
  * @param {boolean} opt_value [false] Value to set.
  * @return {anychart.core.ui.Tooltip} Self instance for method chaining.
  * @since 7.12.0
  */
 anychart.core.ui.Tooltip.prototype.useHtml;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.core.ui.Tooltip.prototype.onDomReady;
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Getter for the onDomReady handler.
+ * @shortDescription onDomReady handler.
+ * @category Events
+ * @return {function} Handler function.
+ * @since 8.3.0
+ */
+anychart.core.ui.Tooltip.prototype.onDomReady;
+
+/**
+ * Setter for the onDomReady handler.<br/>
+ * Use {api:anychart.core.ui.Tooltip#onDomReady}tooltip.useHtml(true){api} to work with onDomReady handler.<br/>
+ * The method is called once when all the inner elements have been created.<br/>
+ * See the structure of the inner HTML-tooltip elements at the {api:anychart.core.ui.Tooltip#onDomReady}useHtml() method{api}.
+ * @example anychart.core.ui.Tooltip.onDomReady_onBeforeTitleChange_onBeforeContentChange
+ * @param {function} handler Handler function.
+ * Function that looks like <code>function(){
+ * // this.parentElement - the basic HTML-element. The parent DIV of the entire element.
+ * // this.titleElement - the title DIV.
+ * // this.separatorElement - HR-element, tooltip separator
+ * // this.contentElement - the DIV of the tooltip content.
+ * }</code>.
+ * @return {anychart.core.ui.Tooltip} Self instance for method chaining.
+ * @since 8.3.0
+ */
+anychart.core.ui.Tooltip.prototype.onDomReady;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.core.ui.Tooltip.prototype.onBeforeTitleChange
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Getter for the onBeforeTitleChange handler.
+ * @shortDescription onBeforeTitleChange handler.
+ * @category Events
+ * @return {function():boolean} Handler function.
+ * @since 8.3.0
+ */
+anychart.core.ui.Tooltip.prototype.onBeforeTitleChange;
+
+/**
+ * Setter for the onBeforeTitleChange handler.<br/>
+ * Use {api:anychart.core.ui.Tooltip#onDomReady}tooltip.useHtml(true){api} to work with onBeforeTitleChange handler.<br/>
+ * The method is called by the handler context when the title has been changed, but the changes have not yet been applied.
+ * The handler determines whether the changes are applied or no.<br/>
+ * See the structure of the inner HTML-tooltip elements at the {api:anychart.core.ui.Tooltip#onDomReady}useHtml() method{api}.
+ * @example anychart.core.ui.Tooltip.onDomReady_onBeforeTitleChange_onBeforeContentChange
+ * @param {function():boolean} handler Handler function.
+ * Function that looks like <code>function(){
+ * // this.parentElement - the basic HTML-element. The parent DIV of the entire element.
+ * // this.titleElement - the title div.
+ * // this.separatorElement - HR-element, tooltip separator
+ * // this.contentElement - the DIV of the tooltip content.
+ * return booleanFlag // type boolean. Returns <b>true</b> if the title has new text otherwise <b>false</b>.
+ * }</code>.
+ * @return {anychart.core.ui.Tooltip} Self instance for method chaining.
+ * @since 8.3.0
+ */
+anychart.core.ui.Tooltip.prototype.onBeforeTitleChange;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.core.ui.Tooltip.prototype.onTitleChanged
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Getter for the onTitleChanged handler.
+ * @shortDescription onTitleChanged handler.
+ * @category Events
+ * @return {function} Handler function.
+ * @since 8.3.0
+ */
+anychart.core.ui.Tooltip.prototype.onTitleChanged;
+
+/**
+ * Setter for the onTitleChanged handler.<br/>
+ * Use {api:anychart.core.ui.Tooltip#onDomReady}tooltip.useHtml(true){api} to work with onTitleChanged handler.<br/>
+ * The method informs of the title change.<br/>
+ * See the structure of the inner HTML-tooltip elements at the {api:anychart.core.ui.Tooltip#onDomReady}useHtml() method{api}.
+ * @example anychart.core.ui.Tooltip.onTitleChanged
+ * @param {function()} handler Handler function.
+ * Function that looks like <code>function(){
+ * // this.parentElement - the basic HTML-element. The parent DIV of the entire element.
+ * // this.titleElement - the title div.
+ * // this.separatorElement - HR-element, tooltip separator
+ * // this.contentElement - the DIV of the tooltip content.
+ * }</code>.
+ * @return {anychart.core.ui.Tooltip} Self instance for method chaining.
+ * @since 8.3.0
+ */
+anychart.core.ui.Tooltip.prototype.onTitleChanged;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.core.ui.Tooltip.prototype.onBeforeContentChange
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Getter for the onBeforeContentChange handler.
+ * @shortDescription onBeforeContentChange handler.
+ * @category Events
+ * @return {function} Handler function.
+ * @since 8.3.0
+ */
+anychart.core.ui.Tooltip.prototype.onBeforeContentChange;
+
+/**
+ * Setter for the onBeforeContentChange handler.<br/>
+ * Use {api:anychart.core.ui.Tooltip#onDomReady}tooltip.useHtml(true){api} to work with onBeforeContentChange handler.<br/>
+ * The method is called by the handler context when the content has been changed, but the changes have not yet been applied.
+ * The handler determines whether the changes are applied or no.<br/>
+ * See the structure of the inner HTML-tooltip elements at the {api:anychart.core.ui.Tooltip#onDomReady}useHtml() method{api}.
+ * @example anychart.core.ui.Tooltip.onDomReady_onBeforeTitleChange_onBeforeContentChange
+ * @param {function():boolean} handler Handler function.
+ * Function that looks like <code>function(){
+ * // this.parentElement - the basic HTML-element. The parent DIV of the entire element.
+ * // this.titleElement - the title div.
+ * // this.separatorElement - HR-element, tooltip separator
+ * // this.contentElement - the DIV of the tooltip content.
+ * return booleanFlag // type boolean. Returns <b>true</b> if the content has new text otherwise <b>false</b>.
+ * }</code>.
+ * @return {anychart.core.ui.Tooltip} Self instance for method chaining.
+ * @since 8.3.0
+ */
+anychart.core.ui.Tooltip.prototype.onBeforeContentChange;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.core.ui.Tooltip.prototype.onContentChanged
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Getter for the onContentChanged handler.
+ * @shortDescription onContentChanged handler.
+ * @category Events
+ * @return {function} Handler function.
+ * @since 8.3.0
+ */
+anychart.core.ui.Tooltip.prototype.onContentChanged;
+
+/**
+ * Setter for the onContentChanged handler.<br/>
+ * Use {api:anychart.core.ui.Tooltip#onDomReady}tooltip.useHtml(true){api} to work with onContentChanged handler.<br/>
+ * The method informs of the content change.<br/>
+ * See the structure of the inner HTML-tooltip elements at the {api:anychart.core.ui.Tooltip#onDomReady}useHtml() method{api}.
+ * @example anychart.core.ui.Tooltip.onContentChanged
+ * @param {function()} handler Handler function.
+ * Function that looks like <code>function(){
+ * // this.parentElement - the basic HTML-element. The parent DIV of the entire element.
+ * // this.titleElement - the title div.
+ * // this.separatorElement - HR-element, tooltip separator
+ * // this.contentElement - the DIV of the tooltip content.
+ * }</code>.
+ * @return {anychart.core.ui.Tooltip} Self instance for method chaining.
+ * @since 8.3.0
+ */
+anychart.core.ui.Tooltip.prototype.onContentChanged;
 
 //----------------------------------------------------------------------------------------------------------------------
 //
