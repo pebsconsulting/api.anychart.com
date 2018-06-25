@@ -1091,9 +1091,9 @@ anychart.core.ui.Tooltip.prototype.onDomReady;
 
 /**
  * Setter for the onDomReady handler.<br/>
- * Use {api:anychart.core.ui.Tooltip#onDomReady}tooltip.useHtml(true){api} to work with onDomReady handler.<br/>
+ * Use {api:anychart.core.ui.Tooltip#useHtml}tooltip.useHtml(true){api} to work with onDomReady handler.<br/>
  * The method is called once when all the inner elements have been created.<br/>
- * See the structure of the inner HTML-tooltip elements at the {api:anychart.core.ui.Tooltip#onDomReady}useHtml() method{api}.
+ * See the structure of the inner HTML-tooltip elements at the {api:anychart.core.ui.Tooltip#useHtml}useHtml() method{api}.
  * @example anychart.core.ui.Tooltip.onDomReady_onBeforeTitleChange_onBeforeContentChange
  * @param {function} handler Handler function.
  * Function that looks like <code>function(){
@@ -1124,10 +1124,10 @@ anychart.core.ui.Tooltip.prototype.onBeforeTitleChange;
 
 /**
  * Setter for the onBeforeTitleChange handler.<br/>
- * Use {api:anychart.core.ui.Tooltip#onDomReady}tooltip.useHtml(true){api} to work with onBeforeTitleChange handler.<br/>
+ * Use {api:anychart.core.ui.Tooltip#useHtml}tooltip.useHtml(true){api} to work with onBeforeTitleChange handler.<br/>
  * The method is called by the handler context when the title has been changed, but the changes have not yet been applied.
  * The handler determines whether the changes are applied or no.<br/>
- * See the structure of the inner HTML-tooltip elements at the {api:anychart.core.ui.Tooltip#onDomReady}useHtml() method{api}.
+ * See the structure of the inner HTML-tooltip elements at the {api:anychart.core.ui.Tooltip#useHtml}useHtml() method{api}.
  * @example anychart.core.ui.Tooltip.onDomReady_onBeforeTitleChange_onBeforeContentChange
  * @param {function():boolean} handler Handler function.
  * Function that looks like <code>function(){
@@ -1159,9 +1159,9 @@ anychart.core.ui.Tooltip.prototype.onTitleChanged;
 
 /**
  * Setter for the onTitleChanged handler.<br/>
- * Use {api:anychart.core.ui.Tooltip#onDomReady}tooltip.useHtml(true){api} to work with onTitleChanged handler.<br/>
+ * Use {api:anychart.core.ui.Tooltip#useHtml}tooltip.useHtml(true){api} to work with onTitleChanged handler.<br/>
  * The method informs of the title change.<br/>
- * See the structure of the inner HTML-tooltip elements at the {api:anychart.core.ui.Tooltip#onDomReady}useHtml() method{api}.
+ * See the structure of the inner HTML-tooltip elements at the {api:anychart.core.ui.Tooltip#useHtml}useHtml() method{api}.
  * @example anychart.core.ui.Tooltip.onTitleChanged
  * @param {function()} handler Handler function.
  * Function that looks like <code>function(){
@@ -1192,10 +1192,10 @@ anychart.core.ui.Tooltip.prototype.onBeforeContentChange;
 
 /**
  * Setter for the onBeforeContentChange handler.<br/>
- * Use {api:anychart.core.ui.Tooltip#onDomReady}tooltip.useHtml(true){api} to work with onBeforeContentChange handler.<br/>
+ * Use {api:anychart.core.ui.Tooltip#useHtml}tooltip.useHtml(true){api} to work with onBeforeContentChange handler.<br/>
  * The method is called by the handler context when the content has been changed, but the changes have not yet been applied.
  * The handler determines whether the changes are applied or no.<br/>
- * See the structure of the inner HTML-tooltip elements at the {api:anychart.core.ui.Tooltip#onDomReady}useHtml() method{api}.
+ * See the structure of the inner HTML-tooltip elements at the {api:anychart.core.ui.Tooltip#useHtml}useHtml() method{api}.
  * @example anychart.core.ui.Tooltip.onDomReady_onBeforeTitleChange_onBeforeContentChange
  * @param {function():boolean} handler Handler function.
  * Function that looks like <code>function(){
@@ -1227,9 +1227,9 @@ anychart.core.ui.Tooltip.prototype.onContentChanged;
 
 /**
  * Setter for the onContentChanged handler.<br/>
- * Use {api:anychart.core.ui.Tooltip#onDomReady}tooltip.useHtml(true){api} to work with onContentChanged handler.<br/>
+ * Use {api:anychart.core.ui.Tooltip#useHtml}tooltip.useHtml(true){api} to work with onContentChanged handler.<br/>
  * The method informs of the content change.<br/>
- * See the structure of the inner HTML-tooltip elements at the {api:anychart.core.ui.Tooltip#onDomReady}useHtml() method{api}.
+ * See the structure of the inner HTML-tooltip elements at the {api:anychart.core.ui.Tooltip#useHtml}useHtml() method{api}.
  * @example anychart.core.ui.Tooltip.onContentChanged
  * @param {function()} handler Handler function.
  * Function that looks like <code>function(){
