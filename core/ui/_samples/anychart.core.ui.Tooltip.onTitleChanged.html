@@ -64,8 +64,9 @@
         });
 
         // Get information about the changed title.
+        // Hover on the point to check title. 
         tooltip.onTitleChanged(function() {
-            chart.title('Hover on the point to check title. Tooltip title has been changed to "' + this.titleElement.innerText + '"');
+            chart.title('Tooltip title has been changed to "' + this.titleElement.innerText + '"');
         });
 
         chart.listen('pointMouseOver', function(e) {
