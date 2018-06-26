@@ -1064,7 +1064,27 @@ anychart.core.ui.Tooltip.prototype.useHtml;
  *      &lt;div class=&quot;anychart-tooltip-title&quot;&gt;&lt;/div&gt; // The title element.
  *      &lt;hr noshade=&quot;true&quot; class=&quot;anychart-tooltip-separator&quot;&gt; // The tooltip separator element.
  *      &lt;div&gt;&lt;/div&gt; // The content element.
- *      &lt;/div&gt; </code>
+ *      &lt;/div&gt; </code><br>
+ * <pre><code>&lt;div class=&quot;anychart-tooltip&quot;&gt; // The basic HTML-element. The parent DIV of the entire element.
+ *      &lt;div class=&quot;anychart-tooltip-title&quot;&gt;&lt;/div&gt; // The title element.
+ *      &lt;hr noshade=&quot;true&quot; class=&quot;anychart-tooltip-separator&quot;&gt; // The tooltip separator element.
+ *      &lt;div&gt;&lt;/div&gt; // The content element.
+ *      &lt;/div&gt; </code></pre><br>
+ * <pre class="prettyprint"><code>&lt;div class=&quot;anychart-tooltip&quot;&gt; // The basic HTML-element. The parent DIV of the entire element.
+ *      &lt;div class=&quot;anychart-tooltip-title&quot;&gt;&lt;/div&gt; // The title element.
+ *      &lt;hr noshade=&quot;true&quot; class=&quot;anychart-tooltip-separator&quot;&gt; // The tooltip separator element.
+ *      &lt;div&gt;&lt;/div&gt; // The content element.
+ *      &lt;/div&gt; </code></pre><br>
+ * <pre class="prettyprint">&lt;div class=&quot;anychart-tooltip&quot;&gt; // The basic HTML-element. The parent DIV of the entire element.
+ *      &lt;div class=&quot;anychart-tooltip-title&quot;&gt;&lt;/div&gt; // The title element.
+ *      &lt;hr noshade=&quot;true&quot; class=&quot;anychart-tooltip-separator&quot;&gt; // The tooltip separator element.
+ *      &lt;div&gt;&lt;/div&gt; // The content element.
+ *      &lt;/div&gt;</pre><br>
+ * <pre>&lt;div class=&quot;anychart-tooltip&quot;&gt; // The basic HTML-element. The parent DIV of the entire element.
+ *      &lt;div class=&quot;anychart-tooltip-title&quot;&gt;&lt;/div&gt; // The title element.
+ *      &lt;hr noshade=&quot;true&quot; class=&quot;anychart-tooltip-separator&quot;&gt; // The tooltip separator element.
+ *      &lt;div&gt;&lt;/div&gt; // The content element.
+ *      &lt;/div&gt;</pre><br>
  * @example anychart.core.ui.Tooltip.useHtml
  * @param {boolean} opt_value [false] Value to set.
  * @return {anychart.core.ui.Tooltip} Self instance for method chaining.
