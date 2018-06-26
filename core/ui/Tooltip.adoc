@@ -1059,7 +1059,7 @@ anychart.core.ui.Tooltip.prototype.useHtml;
  * Setter for the HTML tooltip.<br/>
  * To work with the HTML tooltip you need to reference the CSS file from AnyChart CDN.
  * (https://cdn.anychart.com/releases/{{branch-name}}/css/anychart-ui.min.css for latest or https://cdn.anychart.com/releases/{{branch-name}}/css/anychart-ui.min.css for the versioned file)<br/>
- * The inner HTML-tooltip elements have the following default structure:<br>?
+ * The inner HTML-tooltip elements have the following default structure:<br>
  * <code>&lt;div class=&quot;anychart-tooltip&quot;&gt; // The basic HTML-element. The parent DIV of the entire element.
  *      &lt;div class=&quot;anychart-tooltip-title&quot;&gt;&lt;/div&gt; // The title element.
  *      &lt;hr noshade=&quot;true&quot; class=&quot;anychart-tooltip-separator&quot;&gt; // The tooltip separator element.
