@@ -1362,7 +1362,7 @@ anychart.core.ui.Tooltip.UnionFormatFunctionThis;
  * Setter for the function content text for union tooltip.<br/>
  * {docs:Common_Settings/Text_Formatters}Learn more about using unionFormat() method.{docs}
  * @example anychart.core.ui.Tooltip.unionFormat
- * @param {(function():string|string)=} opt_unionFormat Function or string token ('{%joinedFormattedValues}') to format content text.
+ * @param {UnionFormatFunction} opt_unionFormat Function or string token ('{%joinedFormattedValues}') to format content text.
  * UnionFormat-function that looks like:
  * <pre>function() {
  *   // this.clientX - X coordinate of the mouse. Type is number
