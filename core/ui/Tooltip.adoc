@@ -1343,6 +1343,22 @@ anychart.core.ui.Tooltip.prototype.valuePrefix;
 anychart.core.ui.Tooltip.prototype.unionFormat;
 
 /**
+ * Type definition for dependency.
+ * @typedef {Object} anychart.core.ui.Tooltip.UnionFormatFunctionThis
+ * @property {string} dataIntervalUnit dataIntervalUnit
+ * @property {number} dataIntervalUnitCount dataIntervalUnitCount
+ * @since 7.11.0
+ */
+anychart.core.ui.Tooltip.UnionFormatFunctionThis;
+
+/**
+ * Union format function.
+ * @typedef {function}
+ * @name UnionFormatFunction
+ * @param {anychart.core.ui.Tooltip.UnionFormatFunctionThis} this This data item.
+ */
+
+/**
  * Setter for the function content text for union tooltip.<br/>
  * {docs:Common_Settings/Text_Formatters}Learn more about using unionFormat() method.{docs}
  * @example anychart.core.ui.Tooltip.unionFormat
