@@ -1059,32 +1059,12 @@ anychart.core.ui.Tooltip.prototype.useHtml;
  * Setter for the HTML tooltip.<br/>
  * To work with the HTML tooltip you need to reference the CSS file from AnyChart CDN.
  * (https://cdn.anychart.com/releases/{{branch-name}}/css/anychart-ui.min.css for latest or https://cdn.anychart.com/releases/{{branch-name}}/css/anychart-ui.min.css for the versioned file)<br/>
- * The inner HTML-tooltip elements have the following default structure:<br>
- * <code>&lt;div class=&quot;anychart-tooltip&quot;&gt; // The basic HTML-element. The parent DIV of the entire element.
- *      &lt;div class=&quot;anychart-tooltip-title&quot;&gt;&lt;/div&gt; // The title element.
- *      &lt;hr noshade=&quot;true&quot; class=&quot;anychart-tooltip-separator&quot;&gt; // The tooltip separator element.
- *      &lt;div&gt;&lt;/div&gt; // The content element.
- *      &lt;/div&gt; </code><br>
- * <pre><code>&lt;div class=&quot;anychart-tooltip&quot;&gt; // The basic HTML-element. The parent DIV of the entire element.
- *      &lt;div class=&quot;anychart-tooltip-title&quot;&gt;&lt;/div&gt; // The title element.
- *      &lt;hr noshade=&quot;true&quot; class=&quot;anychart-tooltip-separator&quot;&gt; // The tooltip separator element.
- *      &lt;div&gt;&lt;/div&gt; // The content element.
- *      &lt;/div&gt; </code></pre><br>
- * <pre class="prettyprint"><code>&lt;div class=&quot;anychart-tooltip&quot;&gt; // The basic HTML-element. The parent DIV of the entire element.
- *      &lt;div class=&quot;anychart-tooltip-title&quot;&gt;&lt;/div&gt; // The title element.
- *      &lt;hr noshade=&quot;true&quot; class=&quot;anychart-tooltip-separator&quot;&gt; // The tooltip separator element.
- *      &lt;div&gt;&lt;/div&gt; // The content element.
- *      &lt;/div&gt; </code></pre><br>
+ * The inner HTML-tooltip elements have the following default structure:
  * <pre class="prettyprint">&lt;div class=&quot;anychart-tooltip&quot;&gt; // The basic HTML-element. The parent DIV of the entire element.
  *      &lt;div class=&quot;anychart-tooltip-title&quot;&gt;&lt;/div&gt; // The title element.
  *      &lt;hr noshade=&quot;true&quot; class=&quot;anychart-tooltip-separator&quot;&gt; // The tooltip separator element.
  *      &lt;div&gt;&lt;/div&gt; // The content element.
- *      &lt;/div&gt;</pre><br>
- * <pre>&lt;div class=&quot;anychart-tooltip&quot;&gt; // The basic HTML-element. The parent DIV of the entire element.
- *      &lt;div class=&quot;anychart-tooltip-title&quot;&gt;&lt;/div&gt; // The title element.
- *      &lt;hr noshade=&quot;true&quot; class=&quot;anychart-tooltip-separator&quot;&gt; // The tooltip separator element.
- *      &lt;div&gt;&lt;/div&gt; // The content element.
- *      &lt;/div&gt;</pre><br>
+ *      &lt;/div&gt;</pre>
  * @example anychart.core.ui.Tooltip.useHtml
  * @param {boolean} opt_value [false] Value to set.
  * @return {anychart.core.ui.Tooltip} Self instance for method chaining.
@@ -1366,7 +1346,8 @@ anychart.core.ui.Tooltip.prototype.unionFormat;
  * {docs:Common_Settings/Text_Formatters}Learn more about using unionFormat() method.{docs}
  * @example anychart.core.ui.Tooltip.unionFormat
  * @param {(function():string|string)=} opt_unionFormat Function or string token ('{%joinedFormattedValues}') to format content text.
- * UnionFormat-function that looks like:<code>function() {
+ * UnionFormat-function that looks like:
+ * <pre class="prettyprint">function() {
  *   // this.clientX - X coordinate of the mouse. Type is number
  *   // this.clientY - Y coordinate of the mouse. Type is number
  *   // this.dataIntervalUnit - Interval unit. Type is string
@@ -1383,7 +1364,7 @@ anychart.core.ui.Tooltip.prototype.unionFormat;
  *   // this.valuePrefix - Prefix value. Type is number
  *   // this.x - The current x. Type is number
  *   }
- *  return unionFormat // string
+ *  return unionFormat // string</pre>
  * @return {anychart.core.ui.Tooltip} Self instance for method chaining.
  * @since 7.12.0
  */
