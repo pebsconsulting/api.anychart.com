@@ -1344,18 +1344,18 @@ anychart.core.ui.Tooltip.prototype.unionFormat;
 
 /**
  * Type definition for dependency.
- * @typedef {Object} anychart.core.ui.Tooltip.UnionFormatFunctionParam
+ * @typedef {Object} anychart.core.ui.Tooltip.aUnionFormatFunctionParam
  * @property {string} dataIntervalUnit dataIntervalUnit
  * @property {number} dataIntervalUnitCount dataIntervalUnitCount
  * @since 7.11.0
  */
-anychart.core.ui.Tooltip.UnionFormatFunctionParam;
+anychart.core.ui.Tooltip.aUnionFormatFunctionParam;
 
 /**
  * Union format function.
  * @typedef {function}
  * @name unionFormatFunction
- * @param {anychart.core.ui.Tooltip.UnionFormatFunctionParam} pr This data item.
+ * @param {anychart.core.ui.Tooltip.aUnionFormatFunctionParam} pr This data item.
  */
 
 /**
