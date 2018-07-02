@@ -1364,7 +1364,7 @@ anychart.core.ui.Tooltip.prototype.unionFormat;
  * Union format function.
  * @typedef {function}
  * @name unionFormatFunction
- * @this string|number|Array.<string>
+ * @this string
  * @param {anychart.core.ui.Tooltip.UnionFormatContext} this This param.
  */
 
