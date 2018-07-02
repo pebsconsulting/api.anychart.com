@@ -1344,7 +1344,7 @@ anychart.core.ui.Tooltip.prototype.unionFormat;
 
 /**
  * Type definition for dependency.
- * @typedef {Object} anychart.core.ui.Tooltip.UnionFormatConext
+ * @typedef {Object} anychart.core.ui.Tooltip.UnionFormatContext
  * @property {string} dataIntervalUnit dataIntervalUnit
  * @property {number} dataIntervalUnitCount dataIntervalUnitCount
  * @property {Array.<string>} formattedValues formattedValues
@@ -1363,16 +1363,16 @@ anychart.core.ui.Tooltip.prototype.unionFormat;
 /**
  * Union format function.
  * @typedef {function}
- * @name unionFormatF
+ * @name unionFormatFunction
  * @this string|number
- * @param {anychart.core.ui.Tooltip.UnionFormatConext} this This param.
+ * @param {anychart.core.ui.Tooltip.UnionFormatContext} this This param.
  */
 
 /**
  * Setter for the function content text for union tooltip.<br/>
  * {docs:Common_Settings/Text_Formatters}Learn more about using unionFormat() method.{docs}
  * @example anychart.core.ui.Tooltip.unionFormat
- * @param {unionFormatF} opt_unionFormat Function or string token ('{%joinedFormattedValues}') to format content text.
+ * @param {unionFormatFunction} opt_unionFormat Function or string token ('{%joinedFormattedValues}') to format content text.
  * UnionFormat-function that looks like:
  * <pre>function() {
  *   // this.clientX - X coordinate of the mouse. Type is number
