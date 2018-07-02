@@ -1347,6 +1347,16 @@ anychart.core.ui.Tooltip.prototype.unionFormat;
  * @typedef {Object} anychart.core.ui.Tooltip.UnionFormatConext
  * @property {string} dataIntervalUnit dataIntervalUnit
  * @property {number} dataIntervalUnitCount dataIntervalUnitCount
+ * @property {Array.<string>} formattedValues formattedValues
+ * @property {number} hoveredDate hoveredDate
+ * @property {boolean} isGrouped isGrouped
+ * @property {string} joinedFormattedValues joinedFormattedValues
+ * @property {Array} points points
+ * @property {number} rawHoveredDate rawHoveredDate
+ * @property {string} titleText titleText
+ * @property {number} valuePostfix valuePostfix
+ * @property {number} valuePrefix valuePrefix
+ * @property {number} x x
  * @since 7.11.0
  */
 
