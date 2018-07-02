@@ -1355,7 +1355,7 @@ anychart.core.ui.Tooltip.aUnionFormatFParam;
  * Union format function.
  * @typedef {function}
  * @name unionFormatF
- * @param {anychart.core.ui.Tooltip.aUnionFormatFParam} pr This data item.
+ * @param {anychart.core.ui.Tooltip.aUnionFormatFParam} this This data item.
  */
 
 /**
