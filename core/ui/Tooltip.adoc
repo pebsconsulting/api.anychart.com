@@ -1344,7 +1344,7 @@ anychart.core.ui.Tooltip.prototype.unionFormat;
 
 /**
  * Type definition for dependency.
- * @typedef {Object} anychart.core.ui.Tooltip.UnionFormatContext
+ * @typedef {Object} anychart.core.ui.Tooltip.UnionFormatParam
  * @property {string} dataIntervalUnit dataIntervalUnit
  * @property {number} dataIntervalUnitCount dataIntervalUnitCount
  * @property {Array.<string>} formattedValues formattedValues
@@ -1365,7 +1365,7 @@ anychart.core.ui.Tooltip.prototype.unionFormat;
  * @typedef {function}
  * @name unionFormatFunction
  * @this number
- * @param {anychart.core.ui.Tooltip.UnionFormatContext} this This param.
+ * @param {anychart.core.ui.Tooltip.UnionFormatParam} this This param.
  */
 
 /**
