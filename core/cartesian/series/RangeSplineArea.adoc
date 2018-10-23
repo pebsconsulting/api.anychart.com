@@ -451,6 +451,3 @@ anychart.core.cartesian.series.RangeSplineArea.prototype.getStat;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.RangeSplineArea.prototype.a11y;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.RangeSplineArea.prototype.xMode;

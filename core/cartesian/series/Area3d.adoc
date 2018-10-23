@@ -308,6 +308,3 @@ anychart.core.cartesian.series.Area3d.prototype.getStat;
 /** @inheritDoc */
 anychart.core.cartesian.series.Area3d.prototype.a11y;
 
-/** @inheritDoc */
-anychart.core.cartesian.series.Area3d.prototype.xMode;
-

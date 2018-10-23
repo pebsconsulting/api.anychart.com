@@ -305,6 +305,3 @@ anychart.core.cartesian.series.OHLC.prototype.getStat;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.OHLC.prototype.a11y;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.OHLC.prototype.xMode;

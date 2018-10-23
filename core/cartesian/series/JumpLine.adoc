@@ -247,6 +247,3 @@ anychart.core.cartesian.series.JumpLine.prototype.getStat;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.JumpLine.prototype.a11y;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.JumpLine.prototype.xMode;

@@ -629,6 +629,3 @@ anychart.core.cartesian.series.Box.prototype.getStat;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.Box.prototype.a11y;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Box.prototype.xMode;

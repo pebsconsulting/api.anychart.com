@@ -479,6 +479,3 @@ anychart.core.cartesian.series.RangeStepArea.prototype.getStat;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.RangeStepArea.prototype.a11y;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.RangeStepArea.prototype.xMode;

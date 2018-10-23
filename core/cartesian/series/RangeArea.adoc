@@ -464,6 +464,3 @@ anychart.core.cartesian.series.RangeArea.prototype.getStat;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.RangeArea.prototype.a11y;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.RangeArea.prototype.xMode;

@@ -400,7 +400,4 @@ anychart.core.cartesian.series.Area.prototype.getStat;
 /** @inheritDoc */
 anychart.core.cartesian.series.Area.prototype.a11y;
 
-/** @inheritDoc */
-anychart.core.cartesian.series.Area.prototype.xMode;
-
 

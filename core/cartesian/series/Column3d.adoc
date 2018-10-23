@@ -329,6 +329,3 @@ anychart.core.cartesian.series.Column3d.prototype.getStat;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.Column3d.prototype.a11y;
-
-/** @inheritDoc */
-anychart.core.cartesian.series.Column3d.prototype.xMode;
