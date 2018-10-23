@@ -226,3 +226,6 @@ anychart.core.cartesian.series.Bar3d.prototype.getStat;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.Bar3d.prototype.a11y;
+
+/** @inheritDoc */
+anychart.core.cartesian.series.Bar3d.prototype.xMode;

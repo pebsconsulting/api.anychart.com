@@ -223,3 +223,5 @@ anychart.core.cartesian.series.Line3d.prototype.getStat;
 /** @inheritDoc */
 anychart.core.cartesian.series.Line3d.prototype.a11y;
 
+/** @inheritDoc */
+anychart.core.cartesian.series.Line3d.prototype.xMode;

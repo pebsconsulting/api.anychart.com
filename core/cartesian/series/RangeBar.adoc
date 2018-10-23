@@ -417,3 +417,6 @@ anychart.core.cartesian.series.RangeBar.prototype.getStat;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.RangeBar.prototype.a11y;
+
+/** @inheritDoc */
+anychart.core.cartesian.series.RangeBar.prototype.xMode;

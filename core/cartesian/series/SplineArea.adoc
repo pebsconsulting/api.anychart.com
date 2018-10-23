@@ -410,3 +410,6 @@ anychart.core.cartesian.series.SplineArea.prototype.getStat;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.SplineArea.prototype.a11y;
+
+/** @inheritDoc */
+anychart.core.cartesian.series.SplineArea.prototype.xMode;

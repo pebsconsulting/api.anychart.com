@@ -409,3 +409,6 @@ anychart.core.cartesian.series.Column.prototype.getStat;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.Column.prototype.a11y;
+
+/** @inheritDoc */
+anychart.core.cartesian.series.Column.prototype.xMode;

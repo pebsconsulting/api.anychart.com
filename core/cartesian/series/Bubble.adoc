@@ -645,3 +645,6 @@ anychart.core.cartesian.series.Bubble.prototype.getStat;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.Bubble.prototype.a11y;
+
+/** @inheritDoc */
+anychart.core.cartesian.series.Bubble.prototype.xMode;

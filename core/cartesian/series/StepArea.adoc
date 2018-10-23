@@ -438,3 +438,6 @@ anychart.core.cartesian.series.StepArea.prototype.getStat;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.StepArea.prototype.a11y;
+
+/** @inheritDoc */
+anychart.core.cartesian.series.StepArea.prototype.xMode;

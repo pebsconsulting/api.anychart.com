@@ -64,7 +64,6 @@ anychart.core.cartesian.series.Line.prototype.stroke;
  */
 anychart.core.cartesian.series.Line.prototype.stroke;
 
-
 /** @inheritDoc */
 anychart.core.cartesian.series.Line.prototype.normal;
 
@@ -247,6 +246,9 @@ anychart.core.cartesian.series.Line.prototype.getStat;
 
 /** @inheritDoc */
 anychart.core.cartesian.series.Line.prototype.a11y;
+
+/** @inheritDoc */
+anychart.core.cartesian.series.Line.prototype.xMode;
 
 //----------------------------------------------------------------------------------------------------------------------
 //
