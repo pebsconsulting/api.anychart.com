@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="ac:name" content="anychart.core.cartesian.series.Base.xMode"/>
+    <meta name="ac:name" content="anychart.core.cartesian.series.RangeColumn.xMode"/>
     <meta name="ac:short-desc" content=""/>
     <meta name="ac:desc" content=""/>
     <script src="https://cdn.anychart.com/releases/{{branch-name}}/js/anychart-base.min.js"></script>
@@ -22,14 +22,15 @@
 <div id="container"></div>
 <script>
     anychart.onDocumentReady(function () {
-        var chart = anychart.line();
+        var chart = anychart.column();
 
-        var series = chart.line([
-            {x: 'A', value: 1},
-            {x: 'A', value: 4},
-            {x: 'B', value: 5},
-            {x: 'B', value: 3},
-            {x: 'C', value: 4}
+        var series = chart.rangeColumn([
+            {x: 'A', high: 10, low: 6},
+            {x: 'A', high: 5, low: 1},
+            {x: 'B', high: 2, low: 1},
+            {x: 'C', high: 20, low: 10},
+            {x: 'C', high: 8, low: 7},
+            {x: 'C', high: 2, low: 1}
         ]);
 
         // Set X mode.
