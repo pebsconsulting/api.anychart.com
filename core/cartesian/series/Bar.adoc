@@ -233,7 +233,7 @@ anychart.core.cartesian.series.Bar.prototype.stroke;
  * @return {string} Returns X mode.
  * @since 8.4.1
  */
-anychart.core.cartesian.series.Base.prototype.xMode;
+anychart.core.cartesian.series.Bar.prototype.xMode;
 
 /**
  * Setter for the X mode.<br/>
