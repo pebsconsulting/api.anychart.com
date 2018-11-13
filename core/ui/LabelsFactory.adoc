@@ -96,7 +96,7 @@ anychart.core.ui.LabelsFactory.prototype.padding;
 anychart.core.ui.LabelsFactory.prototype.padding;
 
 /**
- * Setter for labels padding settings in pixels using several value.
+ * Setter for labels padding settings in pixels using several values.
  * @example anychart.core.ui.LabelsFactory.padding_set_asSeveral
  * @param {(string|number)=} opt_value1 [2] Top or top-bottom space.
  * @param {(string|number)=} opt_value2 [4] Right or right-left space.
@@ -739,7 +739,7 @@ anychart.core.ui.LabelsFactory.Label.prototype.padding;
 anychart.core.ui.LabelsFactory.Label.prototype.padding;
 
 /**
- * Setter for label padding setting in pixels using a several value.
+ * Setter for label padding setting in pixels using a several values.
  * @example anychart.core.ui.LabelsFactory.Label.padding_set_asSeveral
  * @param {(string|number)=} opt_value1 Top or top-bottom space.
  * @param {(string|number)=} opt_value2 Right or right-left space.
@@ -1150,6 +1150,28 @@ anychart.core.ui.LabelsFactory.prototype.connectorStroke;
 
 //----------------------------------------------------------------------------------------------------------------------
 //
+//  anychart.core.ui.LabelsFactory.prototype.clip
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Getter for labels clip settings.
+ * @shortDescription Labels clip settings.
+ * @category Specific settings
+ * @return {(anychart.graphics.vector.Shape|string|anychart.graphics.vector.Clip|anychart.math.Rect)} Clip settings.
+ */
+anychart.core.ui.LabelsFactory.prototype.clip;
+
+/**
+ * Setter for labels clip settings. Clips visible part of labels by a rectangle or shape.
+ * @param {(anychart.graphics.vector.Shape|string|anychart.graphics.vector.Clip|anychart.math.Rect)}
+ * opt_clipSettings Labels clip settings.
+ * @return {anychart.core.ui.LabelsFactory} Self instance for method chaining.
+ */
+anychart.core.ui.LabelsFactory.prototype.clip;
+
+//----------------------------------------------------------------------------------------------------------------------
+//
 //  anychart.core.ui.LabelsFactory.Label.prototype.clear
 //
 //----------------------------------------------------------------------------------------------------------------------
@@ -1193,9 +1215,6 @@ anychart.core.ui.LabelsFactory.Label.prototype.measureWithText;
 
 /** @inheritDoc */
 anychart.core.ui.LabelsFactory.prototype.fontColor;
-
-/** @inheritDoc */
-anychart.core.ui.LabelsFactory.prototype.textSettings;
 
 /** @inheritDoc */
 anychart.core.ui.LabelsFactory.prototype.fontSize;
