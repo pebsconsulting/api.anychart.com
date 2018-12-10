@@ -34,12 +34,13 @@
         ]);
         chart.container('container');
         chart.draw();
+
+        // Get statistic.
+        var average = chart.getStat('dataPlotYAverage');
+
+        chart.title('Average distance is ' + average + ' km');
+
     });
-
-    // Get statistic.
-    var average = chart.getStat('dataPlotYAverage');
-
-    chart.title('Average distance is ' + average + ' km');
 </script>
 </body>
 </html>
